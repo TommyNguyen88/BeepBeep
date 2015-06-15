@@ -10,10 +10,16 @@
 #import "ListCollectionViewCell.h"
 #import "PSTCollectionView.h"
 
+#define ITEMS_PAGE_SIZE 4
+#define ITEM_CELL_IDENTIFIER @"ItemCell"
+#define LOADING_CELL_IDENTIFIER @"LoadingItemCell"
+
 @interface ListViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 {
     NSMutableArray *dataItems;
     NSDate *currentDate;
+    UIRefreshControl *refresher;
+    UIRefreshControl *bottomRefresher;
 }
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -44,6 +50,7 @@
     [self.collectionView setBackgroundColor:[UIColor clearColor]];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"ListCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"ListCell"];
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:LOADING_CELL_IDENTIFIER];
     
     self.listViewLayout = [[UICollectionViewFlowLayout alloc] init];
     self.listViewLayout.scrollDirection = PSTCollectionViewScrollDirectionVertical;
@@ -60,12 +67,30 @@
     self.listViewLayout.minimumLineSpacing = 5.0f;
     self.listViewLayout.sectionInset = UIEdgeInsetsMake(5.0f, 2.0f, 0.0f, 5.0f);
     [self.collectionView setCollectionViewLayout:self.listViewLayout animated:NO];
+    
+    if (!refresher) {
+        refresher = UIRefreshControl.new;
+        [refresher addTarget:self
+                      action:@selector(startRefreshTogetMoreItems)
+            forControlEvents:UIControlEventValueChanged];
+        [self.collectionView addSubview:refresher];
+        self.collectionView.alwaysBounceVertical = YES;
+    }
+    
+    if (!bottomRefresher) {
+        bottomRefresher = UIRefreshControl.new;
+        [bottomRefresher addTarget:self
+                            action:@selector(fetchMoreItems)
+                  forControlEvents:UIControlEventValueChanged];
+        
+        self.collectionView.bottomRefreshControl = bottomRefresher;
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-//    [self setupRightNavigationBarItem];
+    //    [self setupRightNavigationBarItem];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -110,6 +135,26 @@
     }
     
     return cell;
+}
+
+#pragma Mark - Load more action
+
+- (void)startRefreshTogetMoreItems {
+    [self performSelector:@selector(endRefreshingAfterCheckNoNetwork) withObject:nil afterDelay:0.5];
+}
+
+- (void)fetchMoreItems {
+    NSLog(@"FETCHING MORE ITEMS FROM LOCAL ******************");
+    [self performSelector:@selector(endRefreshingAfterCheckNoNetwork) withObject:nil afterDelay:0.5];
+}
+
+- (void)endRefreshingAfterCheckNoNetwork {
+    if (refresher.isRefreshing) {
+        [refresher endRefreshing];
+    }
+    if (bottomRefresher.isRefreshing) {
+        [bottomRefresher endRefreshing];
+    }
 }
 
 - (void)setupRightNavigationBarItem {

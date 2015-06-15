@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-BeepBeep-CCBottomRefreshControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-BeepBeep-MagicalRecord.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BeepBeep-Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1B03CCC88C832868F3E189D3</key>
+		<key>509042599A8FE39B6932DAE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>539E8236E1B30914ABB56943</key>
+		<key>6B2B63889CB98A10F3DAEE33</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE49EDF7514ED7E964A1CB3B</key>
+		<key>825375E6B04BDEECFF2DE50D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>85780FD7B7E4FD460B3FA41C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A651AEF498EF332DF26E7E11</key>
 		<dict>
 			<key>primary</key>
 			<true/>

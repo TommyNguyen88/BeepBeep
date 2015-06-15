@@ -20,14 +20,20 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CCBottomRefreshControl (0.5):
+    - Masonry
   - MagicalRecord (2.3.0)
+  - Masonry (0.6.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - CCBottomRefreshControl
   - MagicalRecord
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  CCBottomRefreshControl: 2cfdbd6f5be5181f5f070637605981d5557e8e32
   MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba
+  Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
 
 COCOAPODS: 0.37.2
