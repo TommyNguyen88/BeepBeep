@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MAPopUpViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdV-hv-MdG">
+                    <rect key="frame" x="116" y="265" width="142" height="138"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJy-2L-spH">
+                            <rect key="frame" x="56" y="16" width="30" height="30"/>
+                            <state key="normal" title="Call">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="actionCall:" destination="-1" eventType="touchUpInside" id="f2j-qu-44h"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmH-OW-L7F">
+                            <rect key="frame" x="52" y="92" width="38" height="30"/>
+                            <state key="normal" title="Email">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="actionSendEmail:" destination="-1" eventType="touchUpInside" id="9Zn-y6-qSp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meJ-wp-RYF">
+                            <rect key="frame" x="20" y="54" width="102" height="30"/>
+                            <state key="normal" title="Send Message">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="actionSendMessage:" destination="-1" eventType="touchUpInside" id="FG9-gZ-xTJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="RJy-2L-spH" firstAttribute="top" secondItem="rdV-hv-MdG" secondAttribute="top" constant="16" id="5DX-AN-vAT"/>
+                        <constraint firstAttribute="width" constant="142" id="6el-r4-vaL"/>
+                        <constraint firstAttribute="height" constant="138" id="G1D-Ot-pNw"/>
+                        <constraint firstAttribute="trailing" secondItem="hmH-OW-L7F" secondAttribute="trailing" constant="52" id="Gzh-5b-XVS"/>
+                        <constraint firstItem="meJ-wp-RYF" firstAttribute="leading" secondItem="rdV-hv-MdG" secondAttribute="leading" constant="20" id="MGY-vX-DmL"/>
+                        <constraint firstItem="meJ-wp-RYF" firstAttribute="top" secondItem="rdV-hv-MdG" secondAttribute="top" constant="54" id="QOT-3M-uUN"/>
+                        <constraint firstItem="RJy-2L-spH" firstAttribute="leading" secondItem="rdV-hv-MdG" secondAttribute="leading" constant="56" id="kqW-Og-ten"/>
+                        <constraint firstAttribute="bottom" secondItem="hmH-OW-L7F" secondAttribute="bottom" constant="16" id="yEC-El-UTk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="rdV-hv-MdG" secondAttribute="centerX" constant="0.5" id="3yG-1J-4Dk"/>
+                <constraint firstAttribute="centerY" secondItem="rdV-hv-MdG" secondAttribute="centerY" constant="-0.5" id="Uxr-zB-bpV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="128.5" y="454.5"/>
+        </view>
+    </objects>
+</document>
