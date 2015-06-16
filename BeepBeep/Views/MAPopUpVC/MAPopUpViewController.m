@@ -19,6 +19,9 @@
     // Do any additional setup after loading the view from its nib.
     
     self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeAnimate)];
+    [self.view addGestureRecognizer:tapGesture];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,7 +90,7 @@
 
 - (void)showAnimate {
     self.view.transform = CGAffineTransformMakeScale(1.3, 1.3);
-    self.view.alpha = 0;
+    self.view.alpha = 0.0;
     [UIView animateWithDuration:.25 animations: ^{
         self.view.alpha = 1;
         self.view.transform = CGAffineTransformMakeScale(1, 1);

@@ -223,9 +223,9 @@
             //Contact HQ
             if (!self.popUpViewController) {
                 self.popUpViewController = [[MAPopUpViewController alloc] initWithNibName:@"MAPopUpViewController" bundle:nil];
+                [self.popUpViewController.view setFrame:CGRectMake(0, -50, DEVICE_WIDTH, DEVICE_HEIGHT + 50)];
             }
             
-            [self.popUpViewController.view setFrame:CGRectMake(0, -30, self.view.frame.size.width, self.view.frame.size.height + 30)];
             [self.popUpViewController showInView:self.view animated:YES andPhoneNumber:self.phoneNumberHQ andEmail:self.emailHQ];
         }
     }

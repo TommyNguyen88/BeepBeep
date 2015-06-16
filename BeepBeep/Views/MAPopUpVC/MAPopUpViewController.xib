@@ -15,58 +15,60 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdV-hv-MdG">
-                    <rect key="frame" x="116" y="265" width="142" height="138"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJy-2L-spH">
-                            <rect key="frame" x="56" y="16" width="30" height="30"/>
-                            <state key="normal" title="Call">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="actionCall:" destination="-1" eventType="touchUpInside" id="f2j-qu-44h"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmH-OW-L7F">
-                            <rect key="frame" x="52" y="92" width="38" height="30"/>
-                            <state key="normal" title="Email">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="actionSendEmail:" destination="-1" eventType="touchUpInside" id="9Zn-y6-qSp"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meJ-wp-RYF">
-                            <rect key="frame" x="20" y="54" width="102" height="30"/>
-                            <state key="normal" title="Send Message">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="actionSendMessage:" destination="-1" eventType="touchUpInside" id="FG9-gZ-xTJ"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJy-2L-spH">
+                    <rect key="frame" x="127" y="278" width="120" height="32"/>
+                    <state key="normal" title="Call" backgroundImage="imgButton.png">
+                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionCall:" destination="-1" eventType="touchUpInside" id="f2j-qu-44h"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meJ-wp-RYF">
+                    <rect key="frame" x="127" y="318" width="120" height="32"/>
                     <constraints>
-                        <constraint firstItem="RJy-2L-spH" firstAttribute="top" secondItem="rdV-hv-MdG" secondAttribute="top" constant="16" id="5DX-AN-vAT"/>
-                        <constraint firstAttribute="width" constant="142" id="6el-r4-vaL"/>
-                        <constraint firstAttribute="height" constant="138" id="G1D-Ot-pNw"/>
-                        <constraint firstAttribute="trailing" secondItem="hmH-OW-L7F" secondAttribute="trailing" constant="52" id="Gzh-5b-XVS"/>
-                        <constraint firstItem="meJ-wp-RYF" firstAttribute="leading" secondItem="rdV-hv-MdG" secondAttribute="leading" constant="20" id="MGY-vX-DmL"/>
-                        <constraint firstItem="meJ-wp-RYF" firstAttribute="top" secondItem="rdV-hv-MdG" secondAttribute="top" constant="54" id="QOT-3M-uUN"/>
-                        <constraint firstItem="RJy-2L-spH" firstAttribute="leading" secondItem="rdV-hv-MdG" secondAttribute="leading" constant="56" id="kqW-Og-ten"/>
-                        <constraint firstAttribute="bottom" secondItem="hmH-OW-L7F" secondAttribute="bottom" constant="16" id="yEC-El-UTk"/>
+                        <constraint firstAttribute="height" constant="32" id="1qh-Ti-jkB"/>
+                        <constraint firstAttribute="width" constant="120" id="sgF-gI-nEw"/>
                     </constraints>
-                </view>
+                    <state key="normal" title="Send Message" backgroundImage="imgButton.png">
+                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionSendMessage:" destination="-1" eventType="touchUpInside" id="FG9-gZ-xTJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmH-OW-L7F">
+                    <rect key="frame" x="127" y="358" width="120" height="32"/>
+                    <state key="normal" title="Email" backgroundImage="imgButton.png">
+                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionSendEmail:" destination="-1" eventType="touchUpInside" id="9Zn-y6-qSp"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="rdV-hv-MdG" secondAttribute="centerX" constant="0.5" id="3yG-1J-4Dk"/>
-                <constraint firstAttribute="centerY" secondItem="rdV-hv-MdG" secondAttribute="centerY" constant="-0.5" id="Uxr-zB-bpV"/>
+                <constraint firstItem="meJ-wp-RYF" firstAttribute="height" secondItem="hmH-OW-L7F" secondAttribute="height" id="6G8-uO-f6T"/>
+                <constraint firstItem="hmH-OW-L7F" firstAttribute="top" secondItem="meJ-wp-RYF" secondAttribute="bottom" constant="8" id="HZ7-5U-Ana"/>
+                <constraint firstItem="meJ-wp-RYF" firstAttribute="leading" secondItem="RJy-2L-spH" secondAttribute="leading" id="Us8-yV-WKm"/>
+                <constraint firstItem="meJ-wp-RYF" firstAttribute="height" secondItem="RJy-2L-spH" secondAttribute="height" id="bLo-EU-Dtz"/>
+                <constraint firstItem="meJ-wp-RYF" firstAttribute="width" secondItem="hmH-OW-L7F" secondAttribute="width" id="dXx-6s-ph1"/>
+                <constraint firstAttribute="centerX" secondItem="meJ-wp-RYF" secondAttribute="centerX" constant="0.5" id="gW3-Hk-r3W"/>
+                <constraint firstItem="meJ-wp-RYF" firstAttribute="width" secondItem="RJy-2L-spH" secondAttribute="width" id="sLe-Or-T2l"/>
+                <constraint firstItem="meJ-wp-RYF" firstAttribute="leading" secondItem="hmH-OW-L7F" secondAttribute="leading" id="vJd-hl-iRd"/>
+                <constraint firstItem="meJ-wp-RYF" firstAttribute="centerY" secondItem="RJy-2L-spH" secondAttribute="centerY" constant="40" id="zDA-Tm-y1N"/>
+                <constraint firstAttribute="centerY" secondItem="meJ-wp-RYF" secondAttribute="centerY" constant="-0.5" id="zWk-Db-hUE"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="128.5" y="454.5"/>
+            <point key="canvasLocation" x="258.5" y="424.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="imgButton.png" width="82" height="25"/>
+    </resources>
 </document>
