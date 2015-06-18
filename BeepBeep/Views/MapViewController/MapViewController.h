@@ -13,6 +13,9 @@
 @class MainViewController;
 
 @interface MapViewController : SuperViewController
+{
+    MKPolyline *mKpolyline;
+}
 
 @property (nonatomic, strong) MainViewController *mainViewController;
 @property (nonatomic, strong) CLLocationManager *locationManager;

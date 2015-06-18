@@ -10,7 +10,6 @@
 #import "CDRTranslucentSideBar.h"
 #import "SKSTableView.h"
 #import "SKSTableViewCell.h"
-#import "MAPopUpViewController.h"
 
 @interface SuperViewController () <UIGestureRecognizerDelegate, SKSTableViewDelegate, CDRTranslucentSideBarDelegate>
 
@@ -18,7 +17,6 @@
 @property (nonatomic, strong) CDRTranslucentSideBar *leftSideBar;
 @property (nonatomic, strong) NSString *phoneNumberHQ;
 @property (nonatomic, strong) NSString *emailHQ;
-@property (nonatomic, strong) MAPopUpViewController *popUpViewController;
 
 @end
 
@@ -28,10 +26,10 @@
     if (!_contents) {
         _contents = @[
                       @[
-                          @[@"Current Job", @"Details", @"Contact Client", @"Contact HQ"],
+                          @[@"Current Job", @"View", @"En-Route", @"None"],
                           @[@"Job Queue", @"Map View", @"List View", @"Job"],
-                          @[@"Alerts", @"Respond", @"Dismiss"],
-                          @[@"Contact HQ", @"Call", @"Send Message", @"Email"],
+                          @[@"Alerts", @"Update"],
+                          @[@"Contact HQ", @"Call", @"Message", @"Email"],
                           @[@"Timecard", @"Check-in", @"Check-out"]]
                       ];
     }
@@ -54,11 +52,6 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BackgroundTableView"]];
     tableView.backgroundView = imageView;
     tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
-    UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DefaultLine"]];
-    [tableView setBackgroundColor:[UIColor blackColor]];
-    [tableView setSeparatorColor:color];
-    
     
     tableView.SKSTableViewDelegate = self;
     
@@ -83,9 +76,9 @@
     
     [self setPositionToTopLeftNavigatorItem:-5];
     
-    UIView *titleBeepBeep = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 175, 45)];
+    UIView *titleBeepBeep = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 148, 25)];
     UIImageView *imgTitle = [[UIImageView alloc] initWithFrame:titleBeepBeep.frame];
-    [imgTitle setImage:[UIImage imageNamed:@"iconBeep"]];
+    [imgTitle setImage:[UIImage imageNamed:@"LogoBeepBeep"]];
     [titleBeepBeep addSubview:imgTitle];
     
     self.navigationItem.titleView = titleBeepBeep;
@@ -179,6 +172,9 @@
     cell.textLabel.text = self.contents[indexPath.section][indexPath.row][0];
     cell.expandable = YES;
     
+    UIFont *boldFont = [UIFont boldSystemFontOfSize:[UIFont systemFontOfSize:25.0].capHeight];
+    [cell.textLabel setFont:boldFont];
+    
     //    if ((indexPath.section == 0 && (indexPath.row == 1 || indexPath.row == 0)) || (indexPath.section == 1 && (indexPath.row == 0 || indexPath.row == 2)))
     //        cell.expandable = YES;
     //    else
@@ -195,7 +191,7 @@
     if (!cell)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
-    [cell.textLabel setTintColor:[UIColor blackColor]];
+    [cell.textLabel setTextColor:[UIColor whiteColor]];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", self.contents[indexPath.section][indexPath.row][indexPath.subRow]];
     //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     [cell.contentView setBackgroundColor:BBColorToSubRowMenu];
@@ -212,21 +208,15 @@
     
     if (indexPath.row == 0) {
         if (indexPath.subRow == 1) {
-            //Details
+            //Vieww
         }
         
         if (indexPath.subRow == 2) {
-            //Contact Client
+            //En-Route
         }
         
         if (indexPath.subRow == 3) {
-            //Contact HQ
-            if (!self.popUpViewController) {
-                self.popUpViewController = [[MAPopUpViewController alloc] initWithNibName:@"MAPopUpViewController" bundle:nil];
-                [self.popUpViewController.view setFrame:CGRectMake(0, -50, DEVICE_WIDTH, DEVICE_HEIGHT + 50)];
-            }
-            
-            [self.popUpViewController showInView:self.view animated:YES andPhoneNumber:self.phoneNumberHQ andEmail:self.emailHQ];
+            //None
         }
     }
     

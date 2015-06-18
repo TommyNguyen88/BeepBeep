@@ -17,38 +17,39 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="nW1-kI-JV6">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="nW1-kI-JV6">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconBeep.png" translatesAutoresizingMaskIntoConstraints="NO" id="gdO-cf-aaO">
-                    <rect key="frame" x="77" y="118" width="232" height="60"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoBeepBeep" translatesAutoresizingMaskIntoConstraints="NO" id="gdO-cf-aaO">
+                    <rect key="frame" x="74" y="174" width="226" height="38"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ec-vB-Cex">
-                    <rect key="frame" x="32" y="245" width="67" height="27"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <rect key="frame" x="32" y="262" width="67" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="66U-HR-qlj"/>
+                        <constraint firstAttribute="width" constant="67" id="VhK-kI-zpv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBO-WA-wq4" customClass="CustomTextField">
-                    <rect key="frame" x="32" y="294" width="310" height="30"/>
+                    <rect key="frame" x="33" y="300" width="310" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="DQv-bc-ozD"/>
+                        <constraint firstAttribute="height" constant="30" id="g7V-kF-mVJ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UHf-8H-ey8" customClass="CustomTextField">
-                    <rect key="frame" x="32" y="332" width="310" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="BOa-D6-2BA"/>
-                    </constraints>
+                    <rect key="frame" x="33" y="338" width="310" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0v-6N-fTe">
-                    <rect key="frame" x="260" y="370" width="82" height="25"/>
+                    <rect key="frame" x="261" y="376" width="82" height="25"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="Sign In" backgroundImage="imgButton.png">
+                    <state key="normal" title="Sign In" backgroundImage="btnWhite">
                         <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
@@ -59,31 +60,32 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="nW1-kI-JV6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0oS-vd-65U"/>
-                <constraint firstItem="MBO-WA-wq4" firstAttribute="centerY" secondItem="gdO-cf-aaO" secondAttribute="centerY" constant="161" id="7aJ-Nq-xVc"/>
-                <constraint firstItem="UHf-8H-ey8" firstAttribute="top" secondItem="J0v-6N-fTe" secondAttribute="top" constant="-38" id="943-9N-8g6"/>
-                <constraint firstItem="MBO-WA-wq4" firstAttribute="leading" secondItem="4ec-vB-Cex" secondAttribute="leading" id="Bpy-z1-VCX"/>
-                <constraint firstItem="UHf-8H-ey8" firstAttribute="width" secondItem="MBO-WA-wq4" secondAttribute="width" id="Bvu-kd-hZD"/>
-                <constraint firstAttribute="centerY" secondItem="gdO-cf-aaO" secondAttribute="centerY" constant="185.5" id="DhB-rG-PLU"/>
-                <constraint firstAttribute="centerX" secondItem="gdO-cf-aaO" secondAttribute="centerX" constant="-5.5" id="EPH-Fi-Be1"/>
-                <constraint firstItem="MBO-WA-wq4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="GGe-ea-kl2"/>
-                <constraint firstItem="UHf-8H-ey8" firstAttribute="top" secondItem="MBO-WA-wq4" secondAttribute="bottom" constant="8" id="H7A-oo-W7O"/>
-                <constraint firstItem="MBO-WA-wq4" firstAttribute="height" secondItem="UHf-8H-ey8" secondAttribute="height" id="KRX-wE-7IL"/>
+                <constraint firstAttribute="centerY" secondItem="MBO-WA-wq4" secondAttribute="centerY" constant="19" id="1QC-ZI-h47"/>
+                <constraint firstItem="4ec-vB-Cex" firstAttribute="leading" secondItem="MBO-WA-wq4" secondAttribute="leading" constant="-1" id="4hU-D4-6Cb"/>
+                <constraint firstItem="UHf-8H-ey8" firstAttribute="top" secondItem="MBO-WA-wq4" secondAttribute="bottom" constant="8" id="58j-wN-XX5"/>
+                <constraint firstItem="UHf-8H-ey8" firstAttribute="leading" secondItem="MBO-WA-wq4" secondAttribute="leading" id="7Kq-qV-qZr"/>
+                <constraint firstItem="4ec-vB-Cex" firstAttribute="top" secondItem="gdO-cf-aaO" secondAttribute="top" constant="88" id="AHb-Qa-RyH"/>
+                <constraint firstItem="UHf-8H-ey8" firstAttribute="width" secondItem="MBO-WA-wq4" secondAttribute="width" id="FRY-VM-KEQ"/>
+                <constraint firstAttribute="centerY" secondItem="gdO-cf-aaO" secondAttribute="centerY" constant="141" id="Fge-iW-Kzb"/>
+                <constraint firstItem="MBO-WA-wq4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="HuY-A5-gdA"/>
+                <constraint firstItem="J0v-6N-fTe" firstAttribute="trailing" secondItem="UHf-8H-ey8" secondAttribute="trailing" id="MLz-e6-gRr"/>
+                <constraint firstItem="UHf-8H-ey8" firstAttribute="height" secondItem="MBO-WA-wq4" secondAttribute="height" id="MPP-2Q-Qdu"/>
                 <constraint firstAttribute="bottom" secondItem="nW1-kI-JV6" secondAttribute="bottom" id="PTt-YF-6nw"/>
-                <constraint firstItem="UHf-8H-ey8" firstAttribute="trailing" secondItem="J0v-6N-fTe" secondAttribute="trailing" id="Wmk-aB-OVF"/>
-                <constraint firstAttribute="trailing" secondItem="MBO-WA-wq4" secondAttribute="trailing" constant="33" id="YOU-1O-05v"/>
+                <constraint firstItem="J0v-6N-fTe" firstAttribute="top" secondItem="UHf-8H-ey8" secondAttribute="bottom" constant="8" id="R3k-p7-hjW"/>
+                <constraint firstAttribute="centerX" secondItem="MBO-WA-wq4" secondAttribute="centerX" constant="-0.5" id="RQI-HY-fU3"/>
                 <constraint firstItem="nW1-kI-JV6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZB9-LB-VG1"/>
-                <constraint firstItem="UHf-8H-ey8" firstAttribute="leading" secondItem="MBO-WA-wq4" secondAttribute="leading" id="gFT-Mi-OTR"/>
-                <constraint firstAttribute="centerY" secondItem="4ec-vB-Cex" secondAttribute="centerY" constant="75" id="jPy-dR-YTP"/>
+                <constraint firstAttribute="trailing" secondItem="MBO-WA-wq4" secondAttribute="trailing" constant="32" id="eaX-Fi-R0U"/>
+                <constraint firstAttribute="centerX" secondItem="gdO-cf-aaO" secondAttribute="centerX" constant="1" id="fnN-pR-V0w"/>
                 <constraint firstAttribute="trailing" secondItem="nW1-kI-JV6" secondAttribute="trailing" id="xx2-ao-z8d"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="1480.5" y="369.5"/>
+            <point key="canvasLocation" x="813" y="430"/>
         </view>
     </objects>
     <resources>
-        <image name="Background.png" width="261" height="474"/>
-        <image name="iconBeep.png" width="232" height="60"/>
-        <image name="imgButton.png" width="82" height="25"/>
+        <image name="Background" width="268" height="478"/>
+        <image name="LogoBeepBeep" width="226" height="38"/>
+        <image name="btnWhite" width="82" height="25"/>
     </resources>
 </document>

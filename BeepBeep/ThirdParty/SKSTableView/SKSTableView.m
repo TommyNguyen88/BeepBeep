@@ -60,15 +60,15 @@ CGFloat const kDefaultCellHeight = 44.0f;
     self.dataSource = self;
     self.delegate = self;
     
-    [self setSeparatorColor:[UIColor colorWithRed:236.0 / 255.0 green:236.0 / 255.0 blue:236.0 / 255.0 alpha:1.0]];
+    [self setSeparatorColor:[UIColor grayColor]];
     
     if (SKSTableViewDelegate)
         _SKSTableViewDelegate = SKSTableViewDelegate;
 }
 
 - (void)setSeparatorColor:(UIColor *)separatorColor {
-    [super setSeparatorColor:BBColorToSubRowMenu];
-    [SKSTableViewCellIndicator setIndicatorColor:BBColorToSubRowMenu];
+    [super setSeparatorColor:separatorColor];
+    [SKSTableViewCellIndicator setIndicatorColor:separatorColor];
 }
 
 - (NSMutableDictionary *)expandableCells {
@@ -157,7 +157,13 @@ CGFloat const kDefaultCellHeight = 44.0f;
             expandableCell.accessoryView = nil;
             [expandableCell removeIndicatorView];
         }
-        [expandableCell.textLabel setTextColor:[UIColor whiteColor]];
+        
+        if (expandableCell.isExpanded) {
+            [expandableCell.textLabel setTextColor:Rgb2UIColor(68.0, 167.0, 222.0)];
+        }
+        else {
+            [expandableCell.textLabel setTextColor:[UIColor whiteColor]];
+        }
         
         return expandableCell;
     }
@@ -215,10 +221,14 @@ CGFloat const kDefaultCellHeight = 44.0f;
                 }
                 
                 if (cell.isExpanded) {
+                    [cell.textLabel setTextColor:Rgb2UIColor(68.0, 167.0, 222.0)];
+                    
                     [self setExpanded:YES forCellAtIndexPath:correspondingIndexPath];
                     [self insertRowsAtIndexPaths:expandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
                 }
                 else {
+                    [cell.textLabel setTextColor:[UIColor whiteColor]];
+                    
                     [self setExpanded:NO forCellAtIndexPath:correspondingIndexPath];
                     [self deleteRowsAtIndexPaths:expandedIndexPaths withRowAnimation:UITableViewRowAnimationTop];
                 }
@@ -256,7 +266,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
 
 //- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
 //    view.tintColor = Rgb2UIColor(36.0, 41.0, 50.0);
-//    
+//
 //    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
 //    [header.textLabel setTextColor:[UIColor whiteColor]];
 //}

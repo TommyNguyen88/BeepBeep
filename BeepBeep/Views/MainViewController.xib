@@ -15,19 +15,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="sne-Ui-bSI">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="sne-Ui-bSI">
                     <rect key="frame" x="0.0" y="0.0" width="382" height="667"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconBeep.png" translatesAutoresizingMaskIntoConstraints="NO" id="zhf-sm-qyO">
-                    <rect key="frame" x="76" y="117" width="232" height="60"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoBeepBeep" translatesAutoresizingMaskIntoConstraints="NO" id="zhf-sm-qyO">
+                    <rect key="frame" x="75" y="174" width="226" height="38"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZv-lW-RZj">
-                    <rect key="frame" x="32" y="311" width="310" height="45"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="5eT-Mt-oxs"/>
-                    </constraints>
+                    <rect key="frame" x="70" y="315" width="243" height="38"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                    <state key="normal" title="Sign In" backgroundImage="imgButton.png">
+                    <state key="normal" backgroundImage="btnSignIn">
                         <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -38,24 +35,23 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="KZv-lW-RZj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="1ZL-me-BiZ"/>
+                <constraint firstAttribute="centerX" secondItem="zhf-sm-qyO" secondAttribute="centerX" id="1gW-OP-OMG"/>
                 <constraint firstItem="sne-Ui-bSI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2ls-38-kNw"/>
+                <constraint firstAttribute="centerY" secondItem="KZv-lW-RZj" secondAttribute="centerY" constant="-0.5" id="86Y-lp-qME"/>
                 <constraint firstAttribute="bottom" secondItem="sne-Ui-bSI" secondAttribute="bottom" id="AyZ-sc-nAc"/>
-                <constraint firstAttribute="centerX" secondItem="zhf-sm-qyO" secondAttribute="centerX" constant="-4.5" id="DIi-G6-Z92"/>
                 <constraint firstItem="sne-Ui-bSI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IUn-dv-69o"/>
-                <constraint firstAttribute="centerY" secondItem="zhf-sm-qyO" secondAttribute="centerY" constant="186.5" id="eDA-k3-obP"/>
-                <constraint firstItem="zhf-sm-qyO" firstAttribute="centerY" secondItem="KZv-lW-RZj" secondAttribute="centerY" constant="-186.5" id="xFF-AW-EzU"/>
-                <constraint firstAttribute="trailing" secondItem="KZv-lW-RZj" secondAttribute="trailing" constant="33" id="xGP-tz-e2P"/>
+                <constraint firstAttribute="centerY" secondItem="zhf-sm-qyO" secondAttribute="centerY" constant="141" id="gqi-2u-cOs"/>
+                <constraint firstAttribute="centerX" secondItem="KZv-lW-RZj" secondAttribute="centerX" constant="-4" id="wux-nP-yCD"/>
                 <constraint firstAttribute="trailing" secondItem="sne-Ui-bSI" secondAttribute="trailing" constant="-7" id="zJA-FR-LlJ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="518.5" y="171.5"/>
+            <point key="canvasLocation" x="758.5" y="236.5"/>
         </view>
     </objects>
     <resources>
-        <image name="Background.png" width="261" height="474"/>
-        <image name="iconBeep.png" width="232" height="60"/>
-        <image name="imgButton.png" width="82" height="25"/>
+        <image name="Background" width="268" height="478"/>
+        <image name="LogoBeepBeep" width="226" height="38"/>
+        <image name="btnSignIn" width="243" height="38"/>
     </resources>
 </document>

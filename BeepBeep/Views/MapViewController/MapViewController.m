@@ -7,8 +7,13 @@
 //
 
 #import "MapViewController.h"
+#import "Pin.h"
 
 @interface MapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
+
+@property (nonatomic, strong) NSMutableArray *allPins;
+@property (nonatomic, strong) MKPolylineView *lineView;
+@property (nonatomic, strong) MKPolyline *polyline;
 
 @end
 
@@ -20,6 +25,7 @@ CLPlacemark *thePlacemark;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.allPins = [NSMutableArray new];
     self.mapView.delegate = self;
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -57,6 +63,7 @@ CLPlacemark *thePlacemark;
     //add location
     [self addLocationToMap:@"125 Trung Kinh Ha Noi"];
     [self addLocationToMap:@"Brandi 1 hotel Duy Tan Ha Noi"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,7 +109,9 @@ CLPlacemark *thePlacemark;
 #pragma Mark -
 
 - (void)drawLine {
-    //
+    [self.mapView removeOverlay:mKpolyline];
+    
+    // create an array of coordinates from allPins
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation> )annotation {

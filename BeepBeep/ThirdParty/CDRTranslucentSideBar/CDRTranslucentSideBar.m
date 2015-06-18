@@ -532,8 +532,8 @@
     
     if (!self.translucentRightView) {
         self.translucentRightView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, DEVICE_HEIGHT)];
-        [self.translucentRightView setBackgroundColor:Rgb2UIColor(103, 108, 118)];
-        [self.translucentRightView setAlpha:0.8];
+        [self.translucentRightView setBackgroundColor:RGB(107.0, 110.0, 118.0)];
+        [self.translucentRightView setAlpha:0.7];
     }
     
     [self.view addSubview:self.translucentRightView];

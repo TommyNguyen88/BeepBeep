@@ -23,7 +23,7 @@
         self.expandable = YES;
         self.expanded = NO;
         
-        UIColor *color = Rgb2UIColor(36.0, 41.0, 50.0);
+        UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@""]];
         [self setBackgroundColor:color];
     }
     return self;
