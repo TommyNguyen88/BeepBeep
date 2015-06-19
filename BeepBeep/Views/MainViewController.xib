@@ -19,10 +19,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="382" height="667"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoBeepBeep" translatesAutoresizingMaskIntoConstraints="NO" id="zhf-sm-qyO">
-                    <rect key="frame" x="75" y="174" width="226" height="38"/>
+                    <rect key="frame" x="43" y="164" width="290" height="58"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZv-lW-RZj">
-                    <rect key="frame" x="70" y="315" width="243" height="38"/>
+                    <rect key="frame" x="47" y="311" width="289" height="46"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <state key="normal" backgroundImage="btnSignIn">
                         <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,12 +46,12 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="758.5" y="236.5"/>
+            <point key="canvasLocation" x="786.5" y="233.5"/>
         </view>
     </objects>
     <resources>
-        <image name="Background" width="268" height="478"/>
-        <image name="LogoBeepBeep" width="226" height="38"/>
-        <image name="btnSignIn" width="243" height="38"/>
+        <image name="Background" width="300" height="512"/>
+        <image name="LogoBeepBeep" width="290" height="58"/>
+        <image name="btnSignIn" width="289" height="46"/>
     </resources>
 </document>

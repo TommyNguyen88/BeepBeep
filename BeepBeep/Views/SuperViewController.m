@@ -10,6 +10,7 @@
 #import "CDRTranslucentSideBar.h"
 #import "SKSTableView.h"
 #import "SKSTableViewCell.h"
+#import "CustomTableViewCell.h"
 
 @interface SuperViewController () <UIGestureRecognizerDelegate, SKSTableViewDelegate, CDRTranslucentSideBarDelegate>
 
@@ -54,6 +55,7 @@
     tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     tableView.SKSTableViewDelegate = self;
+    [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
     // Set ContentView in SideBar
     [self.leftSideBar setContentViewInSideBar:tableView];
@@ -76,9 +78,9 @@
     
     [self setPositionToTopLeftNavigatorItem:-5];
     
-    UIView *titleBeepBeep = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 148, 25)];
+    UIView *titleBeepBeep = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 145, 29)];
     UIImageView *imgTitle = [[UIImageView alloc] initWithFrame:titleBeepBeep.frame];
-    [imgTitle setImage:[UIImage imageNamed:@"LogoBeepBeep"]];
+    [imgTitle setImage:[UIImage imageNamed:@"LogoBBNavigator"]];
     [titleBeepBeep addSubview:imgTitle];
     
     self.navigationItem.titleView = titleBeepBeep;
@@ -90,8 +92,8 @@
     
     UIButton *btnLeft = [UIButton buttonWithType:UIButtonTypeCustom];
     [btnLeft setFrame:CGRectMake(0, 0, 28.0, 20.)];
-    [btnLeft setImage:[UIImage imageNamed:@"menuTopLeft"] forState:UIControlStateNormal];
-    [btnLeft setImage:[UIImage imageNamed:@"menuTopLeft_active"] forState:UIControlStateHighlighted];
+    [btnLeft setImage:[UIImage imageNamed:@"MenuTopLeft"] forState:UIControlStateNormal];
+    [btnLeft setImage:[UIImage imageNamed:@"MenuTopLeftActive"] forState:UIControlStateHighlighted];
     [btnLeft addTarget:self action:@selector(showLeftMenu) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *leftBarItem = [[UIBarButtonItem alloc] initWithCustomView:btnLeft];
@@ -107,7 +109,7 @@
 
 - (void)getNotificationChangeTopLeftItem {
     if (self.leftSideBar.hasShown) {
-        [self setPositionToTopLeftNavigatorItem:-30];
+        [self setPositionToTopLeftNavigatorItem:-35];
     }
     else {
         [self setPositionToTopLeftNavigatorItem:-5];
@@ -156,7 +158,11 @@
 }
 
 - (CGFloat)tableView:(SKSTableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 45.0;
+    return 40.0;
+}
+
+- (CGFloat)tableView:(SKSTableView *)tableView heightForSubRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 35.0;
 }
 
 #pragma mark - UITableViewDelegate
@@ -175,6 +181,9 @@
     UIFont *boldFont = [UIFont boldSystemFontOfSize:[UIFont systemFontOfSize:25.0].capHeight];
     [cell.textLabel setFont:boldFont];
     
+    UIColor *BGViewCell = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BGTableViewCell"]];
+    [cell setBackgroundColor:BGViewCell];
+    
     //    if ((indexPath.section == 0 && (indexPath.row == 1 || indexPath.row == 0)) || (indexPath.section == 1 && (indexPath.row == 0 || indexPath.row == 2)))
     //        cell.expandable = YES;
     //    else
@@ -184,17 +193,32 @@
 }
 
 - (UITableViewCell *)tableView:(SKSTableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"UITableViewCell";
+//    static NSString *CellIdentifier = @"UITableViewCell";
+//    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    
+//    if (!cell)
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+//    
+//    [cell.textLabel setTextColor:[UIColor whiteColor]];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.contents[indexPath.section][indexPath.row][indexPath.subRow]];
+//    //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    [cell.contentView setBackgroundColor:BBColorToSubRowMenu];
+
+    static NSString *CellIdentifier = @"CustomTableViewCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if (!cell)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    if (!cell) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
     
-    [cell.textLabel setTextColor:[UIColor whiteColor]];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.contents[indexPath.section][indexPath.row][indexPath.subRow]];
-    //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    [cell.contentView setBackgroundColor:BBColorToSubRowMenu];
+    [cell.lbSubRow setTextColor:[UIColor whiteColor]];
+    cell.lbSubRow.text = [NSString stringWithFormat:@"%@", self.contents[indexPath.section][indexPath.row][indexPath.subRow]];
+    
+    UIColor *colorCell = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BackgroundTableView"]];
+    [cell.contentView setBackgroundColor:colorCell];
     
     return cell;
 }

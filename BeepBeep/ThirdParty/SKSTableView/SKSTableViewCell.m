@@ -22,9 +22,6 @@
     if (self) {
         self.expandable = YES;
         self.expanded = NO;
-        
-        UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:@""]];
-        [self setBackgroundColor:color];
     }
     return self;
 }

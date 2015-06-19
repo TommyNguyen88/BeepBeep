@@ -60,7 +60,7 @@ CGFloat const kDefaultCellHeight = 44.0f;
     self.dataSource = self;
     self.delegate = self;
     
-    [self setSeparatorColor:[UIColor grayColor]];
+    [self setSeparatorColor:[UIColor clearColor]];
     
     if (SKSTableViewDelegate)
         _SKSTableViewDelegate = SKSTableViewDelegate;

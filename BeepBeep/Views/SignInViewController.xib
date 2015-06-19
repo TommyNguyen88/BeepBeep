@@ -21,10 +21,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoBeepBeep" translatesAutoresizingMaskIntoConstraints="NO" id="gdO-cf-aaO">
-                    <rect key="frame" x="74" y="174" width="226" height="38"/>
+                    <rect key="frame" x="42" y="164" width="290" height="58"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ec-vB-Cex">
-                    <rect key="frame" x="32" y="262" width="67" height="21"/>
+                    <rect key="frame" x="32" y="252" width="67" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="66U-HR-qlj"/>
                         <constraint firstAttribute="width" constant="67" id="VhK-kI-zpv"/>
@@ -47,7 +47,7 @@
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0v-6N-fTe">
-                    <rect key="frame" x="261" y="376" width="82" height="25"/>
+                    <rect key="frame" x="251" y="376" width="92" height="28"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="Sign In" backgroundImage="btnWhite">
                         <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,8 +84,8 @@
         </view>
     </objects>
     <resources>
-        <image name="Background" width="268" height="478"/>
-        <image name="LogoBeepBeep" width="226" height="38"/>
-        <image name="btnWhite" width="82" height="25"/>
+        <image name="Background" width="300" height="512"/>
+        <image name="LogoBeepBeep" width="290" height="58"/>
+        <image name="btnWhite" width="92" height="28"/>
     </resources>
 </document>

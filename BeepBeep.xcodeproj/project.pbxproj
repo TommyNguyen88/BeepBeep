@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A907C21F1B3032F4006B0EB1 /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = A907C21E1B3032F4006B0EB1 /* Pin.m */; };
-		A91EEEFA1B2032820067C047 /* menuTopLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = A91EEEF81B2032820067C047 /* menuTopLeft.png */; };
 		A91EEF051B2033A10067C047 /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A91EEF041B2033A10067C047 /* SuperViewController.m */; };
-		A91EEF071B20348B0067C047 /* menuTopLeft_active.png in Resources */ = {isa = PBXBuildFile; fileRef = A91EEF061B20348B0067C047 /* menuTopLeft_active.png */; };
 		A91EEF131B203CDD0067C047 /* CDRTranslucentSideBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A91EEF121B203CDD0067C047 /* CDRTranslucentSideBar.m */; };
 		A949C1841B1D42F600EDCC95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A949C1831B1D42F600EDCC95 /* main.m */; };
 		A949C1871B1D42F600EDCC95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A949C1861B1D42F600EDCC95 /* AppDelegate.m */; };
@@ -55,6 +53,8 @@
 		A9EC9D911B298E6F0075110E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9EC9D901B298E6F0075110E /* MapKit.framework */; };
 		A9EC9D931B298ED40075110E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9EC9D921B298ED40075110E /* CoreLocation.framework */; };
 		A9F169771B26E2CB0048155C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F169761B26E2CB0048155C /* NetworkManager.m */; };
+		A9F4FB161B32B3B800E96A5B /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F4FB141B32B3B800E96A5B /* CustomTableViewCell.m */; };
+		A9F4FB171B32B3B800E96A5B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9F4FB151B32B3B800E96A5B /* CustomTableViewCell.xib */; };
 		DFCCA84BB8B7257519986F7A /* Pods_BeepBeep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFB7B08AB1E2B0F3AFD146C /* Pods_BeepBeep.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -73,10 +73,8 @@
 		7EFB7B08AB1E2B0F3AFD146C /* Pods_BeepBeep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeepBeep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A907C21D1B3032F4006B0EB1 /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pin.h; path = Views/MapViewController/Pin.h; sourceTree = "<group>"; };
 		A907C21E1B3032F4006B0EB1 /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pin.m; path = Views/MapViewController/Pin.m; sourceTree = "<group>"; };
-		A91EEEF81B2032820067C047 /* menuTopLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuTopLeft.png; path = Resources/menuTopLeft.png; sourceTree = "<group>"; };
 		A91EEF031B2033A10067C047 /* SuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperViewController.h; path = Views/SuperViewController.h; sourceTree = "<group>"; };
 		A91EEF041B2033A10067C047 /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperViewController.m; path = Views/SuperViewController.m; sourceTree = "<group>"; };
-		A91EEF061B20348B0067C047 /* menuTopLeft_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuTopLeft_active.png; path = Resources/menuTopLeft_active.png; sourceTree = "<group>"; };
 		A91EEF111B203CDD0067C047 /* CDRTranslucentSideBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDRTranslucentSideBar.h; path = ThirdParty/CDRTranslucentSideBar/CDRTranslucentSideBar.h; sourceTree = "<group>"; };
 		A91EEF121B203CDD0067C047 /* CDRTranslucentSideBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDRTranslucentSideBar.m; path = ThirdParty/CDRTranslucentSideBar/CDRTranslucentSideBar.m; sourceTree = "<group>"; };
 		A949C17E1B1D42F600EDCC95 /* BeepBeep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeepBeep.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +158,9 @@
 		A9EC9D921B298ED40075110E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9F169751B26E2CB0048155C /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Views/NetworkManager/NetworkManager.h; sourceTree = "<group>"; };
 		A9F169761B26E2CB0048155C /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = Views/NetworkManager/NetworkManager.m; sourceTree = "<group>"; };
+		A9F4FB131B32B3B800E96A5B /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTableViewCell.h; path = Views/CustomTableViewCell/CustomTableViewCell.h; sourceTree = "<group>"; };
+		A9F4FB141B32B3B800E96A5B /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTableViewCell.m; path = Views/CustomTableViewCell/CustomTableViewCell.m; sourceTree = "<group>"; };
+		A9F4FB151B32B3B800E96A5B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = Views/CustomTableViewCell/CustomTableViewCell.xib; sourceTree = "<group>"; };
 		DFF69305C433DB931E05445F /* Pods-BeepBeep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeepBeep.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeepBeep/Pods-BeepBeep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -374,18 +375,8 @@
 		A949C1C91B1D5C3A00EDCC95 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A949C1CA1B1D5C4400EDCC95 /* Image */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		A949C1CA1B1D5C4400EDCC95 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				A91EEF061B20348B0067C047 /* menuTopLeft_active.png */,
-				A91EEEF81B2032820067C047 /* menuTopLeft.png */,
-			);
-			name = Image;
 			sourceTree = "<group>";
 		};
 		A949C1D71B1D61AF00EDCC95 /* Common */ = {
@@ -497,6 +488,9 @@
 				A9E5CAE61B26827A001421FD /* SKSTableViewCell.m */,
 				A9E5CAE71B26827A001421FD /* SKSTableViewCellIndicator.h */,
 				A9E5CAE81B26827A001421FD /* SKSTableViewCellIndicator.m */,
+				A9F4FB131B32B3B800E96A5B /* CustomTableViewCell.h */,
+				A9F4FB141B32B3B800E96A5B /* CustomTableViewCell.m */,
+				A9F4FB151B32B3B800E96A5B /* CustomTableViewCell.xib */,
 			);
 			name = SKSTableView;
 			sourceTree = "<group>";
@@ -606,6 +600,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F4FB171B32B3B800E96A5B /* CustomTableViewCell.xib in Resources */,
 				A9A8255B1B1D990200C34E2F /* SignInViewController.xib in Resources */,
 				A99262A01B1EDFD8003908C6 /* RegisterViewController.xib in Resources */,
 				A949C1921B1D42F700EDCC95 /* LaunchScreen.xib in Resources */,
@@ -614,8 +609,6 @@
 				A9EC9D8E1B297CB70075110E /* MapViewController.xib in Resources */,
 				A9BBA8D21B2A8C5400576149 /* FirstViewController.xib in Resources */,
 				A949C1C51B1D49A500EDCC95 /* MainViewController.xib in Resources */,
-				A91EEEFA1B2032820067C047 /* menuTopLeft.png in Resources */,
-				A91EEF071B20348B0067C047 /* menuTopLeft_active.png in Resources */,
 				A9880CA91B21B1160027FEFA /* ListCollectionViewCell.xib in Resources */,
 				A9EC9D821B296E950075110E /* MAPopUpViewController.xib in Resources */,
 			);
@@ -683,6 +676,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F4FB161B32B3B800E96A5B /* CustomTableViewCell.m in Sources */,
 				A907C21F1B3032F4006B0EB1 /* Pin.m in Sources */,
 				A96744931B2539A0006BD1B4 /* PSTCollectionViewUpdateItem.m in Sources */,
 				A9F169771B26E2CB0048155C /* NetworkManager.m in Sources */,
