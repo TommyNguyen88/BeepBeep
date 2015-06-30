@@ -104,6 +104,7 @@
     if (section == 0) {
         return dataItems.count;
     }
+    
     return 0;
 }
 

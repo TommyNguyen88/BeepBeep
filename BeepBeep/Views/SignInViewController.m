@@ -9,10 +9,11 @@
 #import "SignInViewController.h"
 #import "MapViewController.h"
 #import "ListViewController.h"
+#import "NetworkManager.h"
 
 #define userTest @"q"
 
-@interface SignInViewController () <UIAlertViewDelegate, UITextFieldDelegate>
+@interface SignInViewController () <UIAlertViewDelegate, UITextFieldDelegate, NetworkManagerDelegate>
 
 @end
 
@@ -62,13 +63,15 @@
     }
     
     if ([email isEqualToString:userTest] && [pass isEqualToString:userTest]) {
-        ListViewController *listView = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
-        
-        if (!_firstViewController) {
-            _firstViewController = [[FirstViewController alloc] initWithContentViewController:listView];
-            _firstViewController.mainViewController = self.mainViewController;
-        }
-        [self.navigationController pushViewController:_firstViewController animated:YES];
+        [[NetworkManager sharedManager] signUpWithUsername:email andPassword:pass];
+//
+//        ListViewController *listView = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
+//        
+//        if (!_firstViewController) {
+//            _firstViewController = [[FirstViewController alloc] initWithContentViewController:listView];
+//            _firstViewController.mainViewController = self.mainViewController;
+//        }
+//        [self.navigationController pushViewController:_firstViewController animated:YES];
     }
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:TEXTNULL
@@ -78,6 +81,17 @@
                                               otherButtonTitles:nil];
         alert.tag = 1;
         [alert show];
+    }
+}
+
+#pragma Mark - NetworkManager Delegate
+
+- (void)smDidSignInWithUsername:(NSString *)username andPassword:(NSString *)password error:(MARequestErrorInfo *)error {
+    if (error == nil) {
+        //
+    }
+    else {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:[error descriptionErr] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
     }
 }
 
