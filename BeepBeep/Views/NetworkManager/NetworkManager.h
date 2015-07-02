@@ -22,9 +22,10 @@
 
 + (instancetype)sharedManager;
 
+@property (nonatomic, strong) id<NetworkManagerDelegate> delegate;
 /**-----------------------------------------------------------------**/
 #pragma mark - Authentication
 
-- (void)signUpWithUsername:(NSString *)username andPassword:(NSString *)password;
+- (void)signInWithUsername:(NSString *)username andPassword:(NSString *)password;
 
 @end

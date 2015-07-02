@@ -62,26 +62,7 @@
         return;
     }
     
-    if ([email isEqualToString:userTest] && [pass isEqualToString:userTest]) {
-        [[NetworkManager sharedManager] signUpWithUsername:email andPassword:pass];
-//
-//        ListViewController *listView = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
-//        
-//        if (!_firstViewController) {
-//            _firstViewController = [[FirstViewController alloc] initWithContentViewController:listView];
-//            _firstViewController.mainViewController = self.mainViewController;
-//        }
-//        [self.navigationController pushViewController:_firstViewController animated:YES];
-    }
-    else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:TEXTNULL
-                                                        message:BBALERTTEXTINCORRECT
-                                                       delegate:self
-                                              cancelButtonTitle:BBALERTOKButton
-                                              otherButtonTitles:nil];
-        alert.tag = 1;
-        [alert show];
-    }
+    [[NetworkManager sharedManager] signInWithUsername:email andPassword:pass];
 }
 
 #pragma Mark - NetworkManager Delegate

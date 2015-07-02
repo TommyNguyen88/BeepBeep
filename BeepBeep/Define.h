@@ -15,7 +15,13 @@
 #define Rgb2UIColor(r, g, b)    [UIColor colorWithRed: ((r) / 255.0) green: ((g) / 255.0) blue: ((b) / 255.0) alpha: 1.0]
 #define BBColorToSubRowMenu     Rgb2UIColor(35.0, 40.0, 49.0)
 
+//URL which to call API
+#define BBBaseURL               @"http://192.168.80.87:8088"
+#define BBResCode               @"code"
+#define BBResData               @"data"
 
+// KEYS
+#define BBDataHasChanged                                    @"__BBDataHasChanged__"
 
 #define TEXTNULL                                            @""
 #define BBALERTOKButton                                     @"OK"

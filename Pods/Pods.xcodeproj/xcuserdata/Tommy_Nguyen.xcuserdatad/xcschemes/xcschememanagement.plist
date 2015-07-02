@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BeepBeep-MagicalRecord.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-BeepBeep-Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>509042599A8FE39B6932DAE2</key>
+		<key>65A077003549CA91A968F5B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B2B63889CB98A10F3DAEE33</key>
+		<key>A29089665CE0E9475548C0E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>825375E6B04BDEECFF2DE50D</key>
+		<key>A986C29CB2CCBB3B528D6A2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>85780FD7B7E4FD460B3FA41C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A651AEF498EF332DF26E7E11</key>
+		<key>B893059DA225D3414EADEEEE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
