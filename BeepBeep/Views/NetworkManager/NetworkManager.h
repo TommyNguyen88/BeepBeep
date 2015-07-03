@@ -6,26 +6,16 @@
 //  Copyright (c) 2015 Nguyen Minh. All rights reserved.
 //
 
-#import <AFNetworking/AFNetworking.h>
-#import "MARequestErrorInfo.h"
-
-@protocol NetworkManagerDelegate <NSObject>
-@optional
-
-- (void)smDidOAuthWithToken:(NSString *)token expiresIn:(NSInteger)time error:(MARequestErrorInfo *)error;
-
-- (void)smDidSignInWithUsername:(NSString *)username andPassword:(NSString *)password error:(MARequestErrorInfo *)error;
-
-@end
+#import "MAResponseObject.h"
+#import "RDSession.h"
 
 @interface NetworkManager : AFHTTPRequestOperationManager
 
 + (instancetype)sharedManager;
 
-@property (nonatomic, strong) id<NetworkManagerDelegate> delegate;
 /**-----------------------------------------------------------------**/
 #pragma mark - Authentication
 
-- (void)signInWithUsername:(NSString *)username andPassword:(NSString *)password;
+- (void)signInWithUsername:(NSString *)username andPassword:(NSString *)password completion:(void (^) (MAResponseObject *responseObject))completion;
 
 @end

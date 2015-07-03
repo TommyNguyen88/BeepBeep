@@ -20,11 +20,15 @@
     return __sharedManager;
 }
 
++ (void)initData {
+    //
+}
+
 #pragma mark - SAVE DATA
 
 + (BOOL)saveAllChanges {
     __block BOOL isSaved = YES;
-
+    
     if ([NSManagedObjectContext defaultContext].hasChanges) {
         DLog(@"DataManager:saveAllChanges: hasChanges");
         [[NSManagedObjectContext defaultContext] saveToPersistentStoreWithCompletion: ^(BOOL success, NSError *error) {

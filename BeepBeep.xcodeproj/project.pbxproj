@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A907C21F1B3032F4006B0EB1 /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = A907C21E1B3032F4006B0EB1 /* Pin.m */; };
+		A914CCEC1B4538940031DAEC /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCE51B4538940031DAEC /* JSONModel.m */; };
+		A914CCED1B4538940031DAEC /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCE71B4538940031DAEC /* JSONModelArray.m */; };
+		A914CCEE1B4538940031DAEC /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCE91B4538940031DAEC /* JSONModelClassProperty.m */; };
+		A914CCEF1B4538940031DAEC /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCEB1B4538940031DAEC /* JSONModelError.m */; };
+		A914CCF21B45399C0031DAEC /* MAResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCF11B45399C0031DAEC /* MAResponseObject.m */; };
+		A914CCF81B453A840031DAEC /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCF51B453A840031DAEC /* JSONKeyMapper.m */; };
+		A914CCF91B453A840031DAEC /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCF71B453A840031DAEC /* JSONValueTransformer.m */; };
+		A914CCFC1B453BD10031DAEC /* RDSession.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCFB1B453BD10031DAEC /* RDSession.m */; };
 		A91EEF051B2033A10067C047 /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A91EEF041B2033A10067C047 /* SuperViewController.m */; };
 		A91EEF131B203CDD0067C047 /* CDRTranslucentSideBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A91EEF121B203CDD0067C047 /* CDRTranslucentSideBar.m */; };
 		A949C1841B1D42F600EDCC95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A949C1831B1D42F600EDCC95 /* main.m */; };
@@ -38,7 +46,6 @@
 		A99262AC1B1EE5E1003908C6 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A99262AB1B1EE5E1003908C6 /* CustomTextField.m */; };
 		A9A8255A1B1D990200C34E2F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A825581B1D990200C34E2F /* SignInViewController.m */; };
 		A9A8255B1B1D990200C34E2F /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A825591B1D990200C34E2F /* SignInViewController.xib */; };
-		A9BA2E9B1B39409400E06803 /* MARequestErrorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BA2E981B39409400E06803 /* MARequestErrorInfo.m */; };
 		A9BA2E9C1B39409400E06803 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BA2E9A1B39409400E06803 /* NetworkManager.m */; };
 		A9BBA8C91B2A85ED00576149 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BBA8C71B2A85ED00576149 /* ListViewController.m */; };
 		A9BBA8CA1B2A85ED00576149 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9BBA8C81B2A85ED00576149 /* ListViewController.xib */; };
@@ -102,6 +109,22 @@
 		7EFB7B08AB1E2B0F3AFD146C /* Pods_BeepBeep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeepBeep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A907C21D1B3032F4006B0EB1 /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pin.h; path = Views/MapViewController/Pin.h; sourceTree = "<group>"; };
 		A907C21E1B3032F4006B0EB1 /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pin.m; path = Views/MapViewController/Pin.m; sourceTree = "<group>"; };
+		A914CCE41B4538940031DAEC /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = ThirdParty/JSONModel/JSONModel.h; sourceTree = "<group>"; };
+		A914CCE51B4538940031DAEC /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = ThirdParty/JSONModel/JSONModel.m; sourceTree = "<group>"; };
+		A914CCE61B4538940031DAEC /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONModelArray.h; path = ThirdParty/JSONModel/JSONModelArray.h; sourceTree = "<group>"; };
+		A914CCE71B4538940031DAEC /* JSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONModelArray.m; path = ThirdParty/JSONModel/JSONModelArray.m; sourceTree = "<group>"; };
+		A914CCE81B4538940031DAEC /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONModelClassProperty.h; path = ThirdParty/JSONModel/JSONModelClassProperty.h; sourceTree = "<group>"; };
+		A914CCE91B4538940031DAEC /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONModelClassProperty.m; path = ThirdParty/JSONModel/JSONModelClassProperty.m; sourceTree = "<group>"; };
+		A914CCEA1B4538940031DAEC /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONModelError.h; path = ThirdParty/JSONModel/JSONModelError.h; sourceTree = "<group>"; };
+		A914CCEB1B4538940031DAEC /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONModelError.m; path = ThirdParty/JSONModel/JSONModelError.m; sourceTree = "<group>"; };
+		A914CCF01B45399C0031DAEC /* MAResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAResponseObject.h; path = Views/NetworkManager/MAResponseObject.h; sourceTree = "<group>"; };
+		A914CCF11B45399C0031DAEC /* MAResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAResponseObject.m; path = Views/NetworkManager/MAResponseObject.m; sourceTree = "<group>"; };
+		A914CCF41B453A840031DAEC /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKeyMapper.h; path = ThirdParty/JSONModel/JSONModelTransformations/JSONKeyMapper.h; sourceTree = "<group>"; };
+		A914CCF51B453A840031DAEC /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = ThirdParty/JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
+		A914CCF61B453A840031DAEC /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = ThirdParty/JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
+		A914CCF71B453A840031DAEC /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = ThirdParty/JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
+		A914CCFA1B453BD10031DAEC /* RDSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSession.h; path = Views/NetworkManager/RDSession.h; sourceTree = "<group>"; };
+		A914CCFB1B453BD10031DAEC /* RDSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDSession.m; path = Views/NetworkManager/RDSession.m; sourceTree = "<group>"; };
 		A91EEF031B2033A10067C047 /* SuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperViewController.h; path = Views/SuperViewController.h; sourceTree = "<group>"; };
 		A91EEF041B2033A10067C047 /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperViewController.m; path = Views/SuperViewController.m; sourceTree = "<group>"; };
 		A91EEF111B203CDD0067C047 /* CDRTranslucentSideBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDRTranslucentSideBar.h; path = ThirdParty/CDRTranslucentSideBar/CDRTranslucentSideBar.h; sourceTree = "<group>"; };
@@ -163,8 +186,6 @@
 		A9A825571B1D990200C34E2F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = Views/SignInViewController.h; sourceTree = "<group>"; };
 		A9A825581B1D990200C34E2F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInViewController.m; path = Views/SignInViewController.m; sourceTree = "<group>"; };
 		A9A825591B1D990200C34E2F /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignInViewController.xib; path = Views/SignInViewController.xib; sourceTree = "<group>"; };
-		A9BA2E971B39409400E06803 /* MARequestErrorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MARequestErrorInfo.h; path = Views/NetworkManager/MARequestErrorInfo.h; sourceTree = "<group>"; };
-		A9BA2E981B39409400E06803 /* MARequestErrorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MARequestErrorInfo.m; path = Views/NetworkManager/MARequestErrorInfo.m; sourceTree = "<group>"; };
 		A9BA2E991B39409400E06803 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Views/NetworkManager/NetworkManager.h; sourceTree = "<group>"; };
 		A9BA2E9A1B39409400E06803 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = Views/NetworkManager/NetworkManager.m; sourceTree = "<group>"; };
 		A9BBA8C61B2A85ED00576149 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = Views/ListViewController/ListViewController.h; sourceTree = "<group>"; };
@@ -252,6 +273,7 @@
 		A9F644211B451A5D00C975B6 /* NSManagedObjectContext+MagicalSaves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+MagicalSaves.m"; path = "ThirdParty/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalSaves.m"; sourceTree = "<group>"; };
 		A9F644221B451A5D00C975B6 /* NSManagedObjectContext+MagicalThreading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+MagicalThreading.h"; path = "ThirdParty/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalThreading.h"; sourceTree = "<group>"; };
 		A9F644231B451A5D00C975B6 /* NSManagedObjectContext+MagicalThreading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+MagicalThreading.m"; path = "ThirdParty/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalThreading.m"; sourceTree = "<group>"; };
+		A9F644281B45229900C975B6 /* ModelHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelHeader.h; sourceTree = "<group>"; };
 		DFF69305C433DB931E05445F /* Pods-BeepBeep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeepBeep.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeepBeep/Pods-BeepBeep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,6 +306,33 @@
 				7EFB7B08AB1E2B0F3AFD146C /* Pods_BeepBeep.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A914CCE31B4538260031DAEC /* JSonModel */ = {
+			isa = PBXGroup;
+			children = (
+				A914CCF31B453A3B0031DAEC /* JSONModelTransformations */,
+				A914CCE41B4538940031DAEC /* JSONModel.h */,
+				A914CCE51B4538940031DAEC /* JSONModel.m */,
+				A914CCE61B4538940031DAEC /* JSONModelArray.h */,
+				A914CCE71B4538940031DAEC /* JSONModelArray.m */,
+				A914CCE81B4538940031DAEC /* JSONModelClassProperty.h */,
+				A914CCE91B4538940031DAEC /* JSONModelClassProperty.m */,
+				A914CCEA1B4538940031DAEC /* JSONModelError.h */,
+				A914CCEB1B4538940031DAEC /* JSONModelError.m */,
+			);
+			name = JSonModel;
+			sourceTree = "<group>";
+		};
+		A914CCF31B453A3B0031DAEC /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				A914CCF41B453A840031DAEC /* JSONKeyMapper.h */,
+				A914CCF51B453A840031DAEC /* JSONKeyMapper.m */,
+				A914CCF61B453A840031DAEC /* JSONValueTransformer.h */,
+				A914CCF71B453A840031DAEC /* JSONValueTransformer.m */,
+			);
+			name = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
 		A91EEEFC1B20328B0067C047 /* SuperViewController */ = {
@@ -437,6 +486,7 @@
 		A949C1B41B1D46F300EDCC95 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				A914CCE31B4538260031DAEC /* JSonModel */,
 				A9F643C71B4519D300C975B6 /* MagicalRecord */,
 				A9E5CAE21B268257001421FD /* SKSTableView */,
 				A96744431B2538A5006BD1B4 /* PSTCollectionView */,
@@ -522,6 +572,7 @@
 				A9F381C51B3BB51E004579FA /* BBUser.h */,
 				A9F381C61B3BB51E004579FA /* BBUser.m */,
 				A9F381BC1B3BB294004579FA /* BBDataModel.xcdatamodeld */,
+				A9F644281B45229900C975B6 /* ModelHeader.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -529,10 +580,12 @@
 		A96744991B254D2C006BD1B4 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				A9BA2E971B39409400E06803 /* MARequestErrorInfo.h */,
-				A9BA2E981B39409400E06803 /* MARequestErrorInfo.m */,
 				A9BA2E991B39409400E06803 /* NetworkManager.h */,
 				A9BA2E9A1B39409400E06803 /* NetworkManager.m */,
+				A914CCF01B45399C0031DAEC /* MAResponseObject.h */,
+				A914CCF11B45399C0031DAEC /* MAResponseObject.m */,
+				A914CCFA1B453BD10031DAEC /* RDSession.h */,
+				A914CCFB1B453BD10031DAEC /* RDSession.m */,
 			);
 			name = NetworkManager;
 			sourceTree = "<group>";
@@ -909,6 +962,8 @@
 				A91EEF051B2033A10067C047 /* SuperViewController.m in Sources */,
 				A9F643DF1B451A0D00C975B6 /* MagicalRecord.m in Sources */,
 				A9F644091B451A3300C975B6 /* NSRelationshipDescription+MagicalDataImport.m in Sources */,
+				A914CCF21B45399C0031DAEC /* MAResponseObject.m in Sources */,
+				A914CCEC1B4538940031DAEC /* JSONModel.m in Sources */,
 				A9F644181B451A4700C975B6 /* NSManagedObject+MagicalFinders.m in Sources */,
 				A9F644071B451A3300C975B6 /* NSNumber+MagicalDataImport.m in Sources */,
 				A949C1C81B1D4E2500EDCC95 /* BaseViewController.m in Sources */,
@@ -916,7 +971,10 @@
 				A949C1C41B1D49A500EDCC95 /* MainViewController.m in Sources */,
 				A9EC9D8D1B297CB70075110E /* MapViewController.m in Sources */,
 				A9F644041B451A3300C975B6 /* MagicalImportFunctions.m in Sources */,
+				A914CCED1B4538940031DAEC /* JSONModelArray.m in Sources */,
+				A914CCF81B453A840031DAEC /* JSONKeyMapper.m in Sources */,
 				A9C9F8F31B45160B001DEC44 /* DataManager.m in Sources */,
+				A914CCEF1B4538940031DAEC /* JSONModelError.m in Sources */,
 				A9F643E21B451A0D00C975B6 /* MagicalRecord+iCloud.m in Sources */,
 				A9F643E01B451A0D00C975B6 /* MagicalRecord+Actions.m in Sources */,
 				A967448C1B2539A0006BD1B4 /* PSTCollectionView.m in Sources */,
@@ -933,7 +991,6 @@
 				A9F643E41B451A0D00C975B6 /* MagicalRecord+Setup.m in Sources */,
 				A96744901B2539A0006BD1B4 /* PSTCollectionViewFlowLayout.m in Sources */,
 				A967448E1B2539A0006BD1B4 /* PSTCollectionViewController.m in Sources */,
-				A9BA2E9B1B39409400E06803 /* MARequestErrorInfo.m in Sources */,
 				A9F643F41B451A1B00C975B6 /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				A9F644251B451A5D00C975B6 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				A9BBA8D11B2A8C5400576149 /* FirstViewController.m in Sources */,
@@ -941,6 +998,7 @@
 				A9F6440A1B451A3300C975B6 /* NSString+MagicalDataImport.m in Sources */,
 				A96744921B2539A0006BD1B4 /* PSTCollectionViewLayout.m in Sources */,
 				A9F643F21B451A1B00C975B6 /* NSManagedObjectModel+MagicalRecord.m in Sources */,
+				A914CCF91B453A840031DAEC /* JSONValueTransformer.m in Sources */,
 				A9F6441A1B451A4700C975B6 /* NSManagedObject+MagicalRequests.m in Sources */,
 				A9E5CAE91B26827A001421FD /* SKSTableView.m in Sources */,
 				A967448F1B2539A0006BD1B4 /* PSTCollectionViewData.m in Sources */,
@@ -948,8 +1006,10 @@
 				A9F381BE1B3BB294004579FA /* BBDataModel.xcdatamodeld in Sources */,
 				A9F644191B451A4700C975B6 /* NSManagedObject+MagicalRecord.m in Sources */,
 				A949C1BF1B1D493D00EDCC95 /* MLKMenuPopover.m in Sources */,
+				A914CCFC1B453BD10031DAEC /* RDSession.m in Sources */,
 				A9EC9D811B296E950075110E /* MAPopUpViewController.m in Sources */,
 				A96744941B2539A0006BD1B4 /* PSTGridLayoutInfo.m in Sources */,
+				A914CCEE1B4538940031DAEC /* JSONModelClassProperty.m in Sources */,
 				A9F644081B451A3300C975B6 /* NSObject+MagicalDataImport.m in Sources */,
 				A9F381C71B3BB51E004579FA /* BBUser.m in Sources */,
 				A9E5CAEB1B26827A001421FD /* SKSTableViewCellIndicator.m in Sources */,

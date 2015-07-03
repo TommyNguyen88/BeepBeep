@@ -13,7 +13,7 @@
 
 #define userTest @"q"
 
-@interface SignInViewController () <UIAlertViewDelegate, UITextFieldDelegate, NetworkManagerDelegate>
+@interface SignInViewController () <UIAlertViewDelegate, UITextFieldDelegate>
 
 @end
 
@@ -62,18 +62,9 @@
         return;
     }
     
-    [[NetworkManager sharedManager] signInWithUsername:email andPassword:pass];
-}
-
-#pragma Mark - NetworkManager Delegate
-
-- (void)smDidSignInWithUsername:(NSString *)username andPassword:(NSString *)password error:(MARequestErrorInfo *)error {
-    if (error == nil) {
+    [[NetworkManager sharedManager] signInWithUsername:email andPassword:pass completion:^(MAResponseObject *responseObject) {
         //
-    }
-    else {
-        [[[UIAlertView alloc] initWithTitle:@"Error" message:[error descriptionErr] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
-    }
+    }];
 }
 
 #pragma Mark - Alert Delegate

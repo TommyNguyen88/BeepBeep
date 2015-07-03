@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DataManager.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Setup MagiccalRecord
+    // Setup MagicalRecord
     [MagicalRecord setupAutoMigratingCoreDataStack];
-    
+    [DataManager initData];
+
     //Setup Window
     CGRect frame = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:frame];

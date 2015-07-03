@@ -14,9 +14,11 @@
 
 #define MR_SHORTHAND
 #import "CoreData+MagicalRecord.h"
+
+#import <AFNetworking/AFNetworking.h>
 #import "Define.h"
 #import "Macro.h"
 #import "Logging.h"
-
+#import "ModelHeader.h"
 
 #endif

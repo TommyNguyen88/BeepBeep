@@ -11,5 +11,6 @@
 @interface DataManager : NSObject
 
 + (instancetype)sharedManager;
++ (void)initData;
 + (BOOL)saveAllChanges;
 @end
