@@ -16,12 +16,12 @@
 #define BBColorToSubRowMenu     Rgb2UIColor(35.0, 40.0, 49.0)
 
 //URL which to call API
-#define BBBaseURL                                           @"http://192.168.80.87:8088"
+#define BBApiSignIn                                         @"/oauth/token"
 #define BBResCode                                           @"code"
 #define BBResAccesToken                                     @"access_token"
 #define BBResTokenType                                      @"token_type"
-
-#define BBNetWorkTimeOutInterval                            60
+#define BBHTTPMethodPOST                                    @"POST"
+#define BBNetWorkTimeOutInterval                            30
 
 
 // KEYS

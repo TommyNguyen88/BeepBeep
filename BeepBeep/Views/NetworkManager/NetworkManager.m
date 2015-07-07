@@ -14,7 +14,14 @@
     static NetworkManager *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[NetworkManager alloc] initWithBaseURL:[NSURL URLWithString:BBBaseURL]];
+        NSString *configPath = [[NSBundle mainBundle] pathForResource:@"Configurations" ofType:@"plist"];
+        NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:configPath];
+        
+        NSString *hostInfo = [config objectForKey:@"host"];
+        
+        hostInfo = [hostInfo stringByAppendingString:BBApiSignIn];
+        
+        _sharedClient = [[NetworkManager alloc] initWithBaseURL:[NSURL URLWithString:hostInfo]];
     });
     
     return _sharedClient;
@@ -24,12 +31,28 @@
     self = [super initWithBaseURL:url];
     
     if (self) {
+//        self.requestSerializer = [AFHTTPRequestSerializer serializer];
+//        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
-        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        self.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        // Add missing accept content types
+        if (![self.responseSerializer.acceptableContentTypes containsObject:@"text/html"]) {
+            NSMutableSet *acceptableTypes = [NSMutableSet setWithSet:self.responseSerializer.acceptableContentTypes];
+            [acceptableTypes addObject:@"text/html"];
+            [self.responseSerializer setAcceptableContentTypes:acceptableTypes];
+        }
+        
+        //
+        if (![self.responseSerializer.acceptableContentTypes containsObject:@"application/json"]) {
+            NSMutableSet *acceptableTypes = [NSMutableSet setWithSet:self.responseSerializer.acceptableContentTypes];
+            [acceptableTypes addObject:@"application/json"];
+            [self.responseSerializer setAcceptableContentTypes:acceptableTypes];
+        }
         
         self.securityPolicy.allowInvalidCertificates = YES;
-//        [self.requestSerializer setAuthorizationHeaderFieldWithUsername:username password:password];
     }
     
     return self;
@@ -99,82 +122,96 @@
 
 - (NSDictionary *)fullAPIParameters:(NSDictionary *)parameters {
     NSMutableDictionary *mParams = parameters ? parameters.mutableCopy : @{}.mutableCopy;
-    //    [mParams setObject:[[RDSession sharedSession] accessToken] forKey:kAPIKeyAccessToken];
+    //[mParams setObject:[[RDSession sharedSession] accessToken] forKey:BBResAccesToken];
     return mParams;
 }
 
 #pragma mark - Authentication
 
 - (void)signInWithUsername:(NSString *)username andPassword:(NSString *)password completion:(void (^)(MAResponseObject *))completion {
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    
-    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    
-    manager.securityPolicy.allowInvalidCertificates = YES;
-    
-    NSDictionary *parameters = @{
-                                 @"grant_type": @"password",
-                                 @"username": username,
+    if (username == nil || password == nil) {
+        DLogError(@"ERROR: NOT NULL");
+    }
+    else {
+        NSDictionary *params = @{
+                                 @"grant_type" : @"password",
+                                 @"email": username,
                                  @"password": password
                                  };
-    
-    NSError *error;
-    NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"POST" URLString:[BBBaseURL stringByAppendingString:@"/oauth/token"] parameters:parameters error:&error];
-    
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    [operation setResponseSerializer:[AFJSONResponseSerializer alloc]];
-    [operation setCompletionBlockWithSuccess: ^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSInteger code = [[responseObject objectForKey:BBResCode] integerValue];
         
-        if (code == 0) {
-            id accessToken = [responseObject objectForKey:BBResAccesToken];
-            id tokenType = [responseObject objectForKey:BBResTokenType];
-            
-            NSLog(@"Success: %@ -- %@", accessToken, tokenType);
-        }
-        else {
-            NSString *str = @"Sign in failed!";
-            switch (code) {
-                case 400:
-                    str = NSLocalizedString(@"Bad Parameters", nil);
-                    break;
-                    
-                case 401:
-                    str = NSLocalizedString(@"Unauthorized", nil);
-                    break;
-                    
-                case 402:
-                    str = NSLocalizedString(@"Payment Required", nil);
-                    break;
-                    
-                case 403:
-                    str = NSLocalizedString(@"Forbidden", nil);
-                    break;
-                    
-                case 404:
-                    str = NSLocalizedString(@"Not Found", nil);
-                    break;
-                    
-                case 500:
-                    str = NSLocalizedString(@"Internal Server Error", nil);
-                    break;
-                    
-                case 501:
-                    str = NSLocalizedString(@"Not Implemented", nil);
-                    break;
-                    
-                default:
-                    break;
-            }
-        }
-    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Failure: %@", error);
-    }];
+        [self callWebserviceWithPath:BBApiSignIn method:BBHTTPMethodPOST parameters:params completion:completion];
+    }
     
-    [manager.operationQueue addOperation:operation];
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    
+//    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+//    
+//    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+//    
+//    manager.securityPolicy.allowInvalidCertificates = YES;
+//    
+//    NSDictionary *parameters = @{
+//                                 @"grant_type": @"password",
+//                                 @"username": username,
+//                                 @"password": password
+//                                 };
+//    
+//    NSError *error;
+//    NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:@"POST" URLString:[BBApiSignIn stringByAppendingString:@"/oauth/token"] parameters:parameters error:&error];
+//    
+//    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+//    [operation setResponseSerializer:[AFJSONResponseSerializer alloc]];
+//    [operation setCompletionBlockWithSuccess: ^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSInteger code = [[responseObject objectForKey:BBResCode] integerValue];
+//        
+//        if (code == 0) {
+//            id accessToken = [responseObject objectForKey:BBResAccesToken];
+//            id tokenType = [responseObject objectForKey:BBResTokenType];
+//            
+//            NSLog(@"Success: %@ -- %@", accessToken, tokenType);
+//        }
+//        else {
+//            NSString *str = @"Sign in failed!";
+//            switch (code) {
+//                case 400:
+//                    str = NSLocalizedString(@"Bad Parameters", nil);
+//                    break;
+//                    
+//                case 401:
+//                    str = NSLocalizedString(@"Unauthorized", nil);
+//                    break;
+//                    
+//                case 402:
+//                    str = NSLocalizedString(@"Payment Required", nil);
+//                    break;
+//                    
+//                case 403:
+//                    str = NSLocalizedString(@"Forbidden", nil);
+//                    break;
+//                    
+//                case 404:
+//                    str = NSLocalizedString(@"Not Found", nil);
+//                    break;
+//                    
+//                case 500:
+//                    str = NSLocalizedString(@"Internal Server Error", nil);
+//                    break;
+//                    
+//                case 501:
+//                    str = NSLocalizedString(@"Not Implemented", nil);
+//                    break;
+//                    
+//                default:
+//                    break;
+//            }
+//        }
+//    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"Failure: %@", error);
+//    }];
+//    
+//    [manager.operationQueue addOperation:operation];
 }
 
 @end

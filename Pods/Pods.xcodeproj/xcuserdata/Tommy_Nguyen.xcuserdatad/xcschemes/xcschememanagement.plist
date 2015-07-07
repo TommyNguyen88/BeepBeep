@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-BeepBeep-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-BeepBeep-Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>65A077003549CA91A968F5B7</key>
+		<key>7DAA44A9495B6D7F542F3631</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A29089665CE0E9475548C0E2</key>
+		<key>C334D7CE5B81050711021E60</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A986C29CB2CCBB3B528D6A2B</key>
+		<key>CD95BB568D5D4634623029C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B893059DA225D3414EADEEEE</key>
+		<key>D9119B29117FF81BBFB8E3E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E85E1FE9DFB53CBC6C1C3283</key>
 		<dict>
 			<key>primary</key>
 			<true/>

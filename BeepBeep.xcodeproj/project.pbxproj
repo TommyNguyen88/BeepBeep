@@ -52,6 +52,7 @@
 		A9BBA8D11B2A8C5400576149 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BBA8CF1B2A8C5400576149 /* FirstViewController.m */; };
 		A9BBA8D21B2A8C5400576149 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9BBA8D01B2A8C5400576149 /* FirstViewController.xib */; };
 		A9C9F8F31B45160B001DEC44 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C9F8F21B45160B001DEC44 /* DataManager.m */; };
+		A9CE03121B4B816A009E504E /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9CE03111B4B816A009E504E /* Configurations.plist */; };
 		A9E5CAE91B26827A001421FD /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E5CAE41B26827A001421FD /* SKSTableView.m */; };
 		A9E5CAEA1B26827A001421FD /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E5CAE61B26827A001421FD /* SKSTableViewCell.m */; };
 		A9E5CAEB1B26827A001421FD /* SKSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E5CAE81B26827A001421FD /* SKSTableViewCellIndicator.m */; };
@@ -145,7 +146,6 @@
 		A949C1C31B1D49A500EDCC95 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Views/MainViewController.xib; sourceTree = "<group>"; };
 		A949C1C61B1D4E2500EDCC95 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Views/BaseViewController.h; sourceTree = "<group>"; };
 		A949C1C71B1D4E2500EDCC95 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Views/BaseViewController.m; sourceTree = "<group>"; };
-		A949C1D81B1D61CE00EDCC95 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		A949C1D91B1D620B00EDCC95 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A967446F1B2539A0006BD1B4 /* NSIndexPath+PSTCollectionViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSIndexPath+PSTCollectionViewAdditions.h"; path = "ThirdParty/PSTCollectionView/NSIndexPath+PSTCollectionViewAdditions.h"; sourceTree = "<group>"; };
 		A96744701B2539A0006BD1B4 /* NSIndexPath+PSTCollectionViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexPath+PSTCollectionViewAdditions.m"; path = "ThirdParty/PSTCollectionView/NSIndexPath+PSTCollectionViewAdditions.m"; sourceTree = "<group>"; };
@@ -197,13 +197,17 @@
 		A9C9F8F11B45160B001DEC44 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = Views/DataManager/DataManager.h; sourceTree = "<group>"; };
 		A9C9F8F21B45160B001DEC44 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataManager.m; path = Views/DataManager/DataManager.m; sourceTree = "<group>"; };
 		A9C9F8F51B451737001DEC44 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logging.h; path = Views/Categories/Logging.h; sourceTree = "<group>"; };
+		A9CE03111B4B816A009E504E /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
+		A9CE03131B4B8AAD009E504E /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Define.h; path = Common/Define.h; sourceTree = "<group>"; };
+		A9CE03141B4B8AAD009E504E /* IFColorLogging.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFColorLogging.pch; path = Common/IFColorLogging.pch; sourceTree = "<group>"; };
+		A9CE03151B4B8AAD009E504E /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macro.h; path = Common/Macro.h; sourceTree = "<group>"; };
+		A9CE03161B4B8AB4009E504E /* ModelHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelHeader.h; path = Common/ModelHeader.h; sourceTree = "<group>"; };
 		A9E5CAE31B26827A001421FD /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKSTableView.h; path = ThirdParty/SKSTableView/SKSTableView.h; sourceTree = "<group>"; };
 		A9E5CAE41B26827A001421FD /* SKSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKSTableView.m; path = ThirdParty/SKSTableView/SKSTableView.m; sourceTree = "<group>"; };
 		A9E5CAE51B26827A001421FD /* SKSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKSTableViewCell.h; path = ThirdParty/SKSTableView/SKSTableViewCell.h; sourceTree = "<group>"; };
 		A9E5CAE61B26827A001421FD /* SKSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKSTableViewCell.m; path = ThirdParty/SKSTableView/SKSTableViewCell.m; sourceTree = "<group>"; };
 		A9E5CAE71B26827A001421FD /* SKSTableViewCellIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKSTableViewCellIndicator.h; path = ThirdParty/SKSTableView/SKSTableViewCellIndicator.h; sourceTree = "<group>"; };
 		A9E5CAE81B26827A001421FD /* SKSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKSTableViewCellIndicator.m; path = ThirdParty/SKSTableView/SKSTableViewCellIndicator.m; sourceTree = "<group>"; };
-		A9E5CAF41B26932A001421FD /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		A9EC9D7E1B296E950075110E /* MAPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MAPopUpViewController.h; path = Views/MAPopUpVC/MAPopUpViewController.h; sourceTree = "<group>"; };
 		A9EC9D7F1B296E950075110E /* MAPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MAPopUpViewController.m; path = Views/MAPopUpVC/MAPopUpViewController.m; sourceTree = "<group>"; };
 		A9EC9D801B296E950075110E /* MAPopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MAPopUpViewController.xib; path = Views/MAPopUpVC/MAPopUpViewController.xib; sourceTree = "<group>"; };
@@ -273,7 +277,6 @@
 		A9F644211B451A5D00C975B6 /* NSManagedObjectContext+MagicalSaves.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+MagicalSaves.m"; path = "ThirdParty/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalSaves.m"; sourceTree = "<group>"; };
 		A9F644221B451A5D00C975B6 /* NSManagedObjectContext+MagicalThreading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+MagicalThreading.h"; path = "ThirdParty/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalThreading.h"; sourceTree = "<group>"; };
 		A9F644231B451A5D00C975B6 /* NSManagedObjectContext+MagicalThreading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+MagicalThreading.m"; path = "ThirdParty/MagicalRecord/Categories/NSManagedObjectContext/NSManagedObjectContext+MagicalThreading.m"; sourceTree = "<group>"; };
-		A9F644281B45229900C975B6 /* ModelHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelHeader.h; sourceTree = "<group>"; };
 		DFF69305C433DB931E05445F /* Pods-BeepBeep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeepBeep.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeepBeep/Pods-BeepBeep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -428,6 +431,7 @@
 				A949C1821B1D42F600EDCC95 /* Info.plist */,
 				A949C1831B1D42F600EDCC95 /* main.m */,
 				A949C1D91B1D620B00EDCC95 /* PrefixHeader.pch */,
+				A9CE03111B4B816A009E504E /* Configurations.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -525,8 +529,9 @@
 		A949C1D71B1D61AF00EDCC95 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				A949C1D81B1D61CE00EDCC95 /* Define.h */,
-				A9E5CAF41B26932A001421FD /* Macro.h */,
+				A9CE03131B4B8AAD009E504E /* Define.h */,
+				A9CE03141B4B8AAD009E504E /* IFColorLogging.pch */,
+				A9CE03151B4B8AAD009E504E /* Macro.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -569,10 +574,10 @@
 		A96744981B253F3C006BD1B4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A9CE03161B4B8AB4009E504E /* ModelHeader.h */,
 				A9F381C51B3BB51E004579FA /* BBUser.h */,
 				A9F381C61B3BB51E004579FA /* BBUser.m */,
 				A9F381BC1B3BB294004579FA /* BBDataModel.xcdatamodeld */,
-				A9F644281B45229900C975B6 /* ModelHeader.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -875,6 +880,7 @@
 				A99262A01B1EDFD8003908C6 /* RegisterViewController.xib in Resources */,
 				A9BBA8CA1B2A85ED00576149 /* ListViewController.xib in Resources */,
 				A949C18F1B1D42F600EDCC95 /* Images.xcassets in Resources */,
+				A9CE03121B4B816A009E504E /* Configurations.plist in Resources */,
 				A9EC9D8E1B297CB70075110E /* MapViewController.xib in Resources */,
 				A9BBA8D21B2A8C5400576149 /* FirstViewController.xib in Resources */,
 				A949C1C51B1D49A500EDCC95 /* MainViewController.xib in Resources */,

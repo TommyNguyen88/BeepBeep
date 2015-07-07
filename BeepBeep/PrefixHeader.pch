@@ -20,5 +20,6 @@
 #import "Macro.h"
 #import "Logging.h"
 #import "ModelHeader.h"
+#import "IFColorLogging.pch"
 
 #endif
