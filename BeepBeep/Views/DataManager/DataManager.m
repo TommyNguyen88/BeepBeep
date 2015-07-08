@@ -20,8 +20,32 @@
     return __sharedManager;
 }
 
++ (SAMHUDView *)sharedHud {
+    static dispatch_once_t onceToken;
+    static SAMHUDView *_sharedHUD = nil;
+    dispatch_once(&onceToken, ^{
+        _sharedHUD = [[SAMHUDView alloc] initWithTitle:@"Loading..."];
+        _sharedHUD.hudSize = CGSizeMake(200.0f, 120.0f);
+        _sharedHUD.hidesVignette = YES;
+    });
+    
+    return _sharedHUD;
+}
+
 + (void)initData {
     //
+}
+
+- (void)showLoadingAnimation:(BOOL)on {
+    if (on) {
+        // TODO: Check double HUD showing!
+        [[DataManager sharedHud] performSelector:@selector(resetTitle:) withObject:@"Loading..."];
+        [[DataManager sharedHud] show];
+    }
+    else {
+        [[DataManager sharedHud] completeWithTitle:@"Done"];
+        [[DataManager sharedHud] performSelector:@selector(dismiss) withObject:nil afterDelay:0.2];
+    }
 }
 
 #pragma mark - SAVE DATA

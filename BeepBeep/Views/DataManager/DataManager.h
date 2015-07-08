@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SAMHUDView.h"
 
 @interface DataManager : NSObject
 
 + (instancetype)sharedManager;
++ (SAMHUDView *) sharedHud;
 + (void)initData;
 + (BOOL)saveAllChanges;
+
+/**-----------------------------------------------------------------**/
+- (void)showLoadingAnimation:(BOOL)on;
+
 @end

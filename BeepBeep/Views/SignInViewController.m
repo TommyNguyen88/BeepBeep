@@ -10,8 +10,7 @@
 #import "MapViewController.h"
 #import "ListViewController.h"
 #import "NetworkManager.h"
-
-#define userTest @"q"
+#import "RDSession.h"
 
 @interface SignInViewController () <UIAlertViewDelegate, UITextFieldDelegate>
 
@@ -63,7 +62,30 @@
     }
     
     [[NetworkManager sharedManager] signInWithUsername:email andPassword:pass completion:^(MAResponseObject *responseObject) {
-        //
+        [[DataManager sharedManager] showLoadingAnimation:NO];
+        if (!responseObject.error) {
+//            BBUser *user = [BBUser createEntity];
+//
+//            NSString *acessToken = responseObject.access_token;
+//            
+//            user.username = email;
+//            user.token = acessToken;
+//            [user save];
+            
+            if (!_listViewController) {
+                _listViewController = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
+            }
+            
+            [self.navigationController pushViewController:_listViewController animated:YES];
+        }
+        else {
+            NSString *errDescription = responseObject.error_description;
+            NSString *error = responseObject.error;
+            self.txtEmail.text = TEXTNULL;
+            self.txtPassword.text = TEXTNULL;
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:error message:errDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
     }];
 }
 

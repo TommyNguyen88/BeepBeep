@@ -17,9 +17,6 @@
 
 //URL which to call API
 #define BBApiSignIn                                         @"/oauth/token"
-#define BBResCode                                           @"code"
-#define BBResAccesToken                                     @"access_token"
-#define BBResTokenType                                      @"token_type"
 #define BBHTTPMethodPOST                                    @"POST"
 #define BBNetWorkTimeOutInterval                            30
 

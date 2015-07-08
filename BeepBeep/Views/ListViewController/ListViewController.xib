@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -10,7 +10,6 @@
                 <outlet property="collectionView" destination="r4i-Ow-CC9" id="Eax-2I-4y6"/>
                 <outlet property="lbDateTime" destination="Oe0-YT-BHb" id="OQL-IZ-zXK"/>
                 <outlet property="listViewLayout" destination="DYV-Qa-ADR" id="oaj-qP-QHG"/>
-                <outlet property="pickerDate" destination="Dck-hS-HPA" id="T3E-4u-cB0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewDateTime" destination="ZAu-KX-QLt" id="urP-Ah-IvI"/>
             </connections>
@@ -67,7 +66,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="172.5" y="599.5"/>
+            <point key="canvasLocation" x="-0.5" y="488.5"/>
         </view>
         <view contentMode="scaleToFill" id="ZAu-KX-QLt">
             <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
@@ -109,7 +108,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="715" y="402"/>
+            <point key="canvasLocation" x="464" y="291"/>
         </view>
     </objects>
 </document>

@@ -77,14 +77,14 @@
         self.collectionView.alwaysBounceVertical = YES;
     }
     
-    if (!bottomRefresher) {
-        bottomRefresher = UIRefreshControl.new;
-        [bottomRefresher addTarget:self
-                            action:@selector(fetchMoreItems)
-                  forControlEvents:UIControlEventValueChanged];
-        
-        self.collectionView.bottomRefreshControl = bottomRefresher;
-    }
+//    if (!bottomRefresher) {
+//        bottomRefresher = UIRefreshControl.new;
+//        [bottomRefresher addTarget:self
+//                            action:@selector(fetchMoreItems)
+//                  forControlEvents:UIControlEventValueChanged];
+//        
+//        self.collectionView.bottomRefreshControl = bottomRefresher;
+//    }
 }
 
 - (void)didReceiveMemoryWarning {

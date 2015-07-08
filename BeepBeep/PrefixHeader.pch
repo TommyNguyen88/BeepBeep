@@ -16,6 +16,10 @@
 #import "CoreData+MagicalRecord.h"
 
 #import <AFNetworking/AFNetworking.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+
+#import "NSManagedObject+ActiveRecord.h"
+
 #import "Define.h"
 #import "Macro.h"
 #import "Logging.h"

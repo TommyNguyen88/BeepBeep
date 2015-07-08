@@ -8,6 +8,7 @@
 
 #import "MAResponseObject.h"
 #import "RDSession.h"
+#import "DataManager.h"
 
 @interface NetworkManager : AFHTTPRequestOperationManager
 

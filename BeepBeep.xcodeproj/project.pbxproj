@@ -18,6 +18,13 @@
 		A914CCFC1B453BD10031DAEC /* RDSession.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCFB1B453BD10031DAEC /* RDSession.m */; };
 		A91EEF051B2033A10067C047 /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A91EEF041B2033A10067C047 /* SuperViewController.m */; };
 		A91EEF131B203CDD0067C047 /* CDRTranslucentSideBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A91EEF121B203CDD0067C047 /* CDRTranslucentSideBar.m */; };
+		A93C26C81B4BB65D00DC588D /* SAMHUDView-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = A93C26C41B4BB65D00DC588D /* SAMHUDView-Check.png */; };
+		A93C26C91B4BB65D00DC588D /* SAMHUDView-Check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A93C26C51B4BB65D00DC588D /* SAMHUDView-Check@2x.png */; };
+		A93C26CA1B4BB65D00DC588D /* SAMHUDView-X.png in Resources */ = {isa = PBXBuildFile; fileRef = A93C26C61B4BB65D00DC588D /* SAMHUDView-X.png */; };
+		A93C26CB1B4BB65D00DC588D /* SAMHUDView-X@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A93C26C71B4BB65D00DC588D /* SAMHUDView-X@2x.png */; };
+		A93C26D21B4BB66700DC588D /* SAMHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C26CD1B4BB66700DC588D /* SAMHUDView.m */; };
+		A93C26D31B4BB66700DC588D /* SAMHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C26CF1B4BB66700DC588D /* SAMHUDWindow.m */; };
+		A93C26D41B4BB66700DC588D /* SAMHUDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C26D11B4BB66700DC588D /* SAMHUDWindowViewController.m */; };
 		A949C1841B1D42F600EDCC95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A949C1831B1D42F600EDCC95 /* main.m */; };
 		A949C1871B1D42F600EDCC95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A949C1861B1D42F600EDCC95 /* AppDelegate.m */; };
 		A949C18F1B1D42F600EDCC95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A949C18E1B1D42F600EDCC95 /* Images.xcassets */; };
@@ -46,6 +53,9 @@
 		A99262AC1B1EE5E1003908C6 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A99262AB1B1EE5E1003908C6 /* CustomTextField.m */; };
 		A9A8255A1B1D990200C34E2F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A825581B1D990200C34E2F /* SignInViewController.m */; };
 		A9A8255B1B1D990200C34E2F /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A825591B1D990200C34E2F /* SignInViewController.xib */; };
+		A9B7DE3C1B4CFF3F00FD5027 /* NSArray+Accessors.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B7DE371B4CFF3F00FD5027 /* NSArray+Accessors.m */; };
+		A9B7DE3D1B4CFF3F00FD5027 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B7DE391B4CFF3F00FD5027 /* NSArray+Additions.m */; };
+		A9B7DE3E1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B7DE3B1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.m */; };
 		A9BA2E9C1B39409400E06803 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BA2E9A1B39409400E06803 /* NetworkManager.m */; };
 		A9BBA8C91B2A85ED00576149 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BBA8C71B2A85ED00576149 /* ListViewController.m */; };
 		A9BBA8CA1B2A85ED00576149 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9BBA8C81B2A85ED00576149 /* ListViewController.xib */; };
@@ -130,6 +140,16 @@
 		A91EEF041B2033A10067C047 /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperViewController.m; path = Views/SuperViewController.m; sourceTree = "<group>"; };
 		A91EEF111B203CDD0067C047 /* CDRTranslucentSideBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDRTranslucentSideBar.h; path = ThirdParty/CDRTranslucentSideBar/CDRTranslucentSideBar.h; sourceTree = "<group>"; };
 		A91EEF121B203CDD0067C047 /* CDRTranslucentSideBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDRTranslucentSideBar.m; path = ThirdParty/CDRTranslucentSideBar/CDRTranslucentSideBar.m; sourceTree = "<group>"; };
+		A93C26C41B4BB65D00DC588D /* SAMHUDView-Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SAMHUDView-Check.png"; path = "ThirdParty/SAMHUDView/Resources/SAMHUDView-Check.png"; sourceTree = "<group>"; };
+		A93C26C51B4BB65D00DC588D /* SAMHUDView-Check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SAMHUDView-Check@2x.png"; path = "ThirdParty/SAMHUDView/Resources/SAMHUDView-Check@2x.png"; sourceTree = "<group>"; };
+		A93C26C61B4BB65D00DC588D /* SAMHUDView-X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SAMHUDView-X.png"; path = "ThirdParty/SAMHUDView/Resources/SAMHUDView-X.png"; sourceTree = "<group>"; };
+		A93C26C71B4BB65D00DC588D /* SAMHUDView-X@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SAMHUDView-X@2x.png"; path = "ThirdParty/SAMHUDView/Resources/SAMHUDView-X@2x.png"; sourceTree = "<group>"; };
+		A93C26CC1B4BB66700DC588D /* SAMHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SAMHUDView.h; path = ThirdParty/SAMHUDView/SAMHUDView/SAMHUDView.h; sourceTree = "<group>"; };
+		A93C26CD1B4BB66700DC588D /* SAMHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SAMHUDView.m; path = ThirdParty/SAMHUDView/SAMHUDView/SAMHUDView.m; sourceTree = "<group>"; };
+		A93C26CE1B4BB66700DC588D /* SAMHUDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SAMHUDWindow.h; path = ThirdParty/SAMHUDView/SAMHUDView/SAMHUDWindow.h; sourceTree = "<group>"; };
+		A93C26CF1B4BB66700DC588D /* SAMHUDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SAMHUDWindow.m; path = ThirdParty/SAMHUDView/SAMHUDView/SAMHUDWindow.m; sourceTree = "<group>"; };
+		A93C26D01B4BB66700DC588D /* SAMHUDWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SAMHUDWindowViewController.h; path = ThirdParty/SAMHUDView/SAMHUDView/SAMHUDWindowViewController.h; sourceTree = "<group>"; };
+		A93C26D11B4BB66700DC588D /* SAMHUDWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SAMHUDWindowViewController.m; path = ThirdParty/SAMHUDView/SAMHUDView/SAMHUDWindowViewController.m; sourceTree = "<group>"; };
 		A949C17E1B1D42F600EDCC95 /* BeepBeep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeepBeep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A949C1821B1D42F600EDCC95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A949C1831B1D42F600EDCC95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -186,6 +206,12 @@
 		A9A825571B1D990200C34E2F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = Views/SignInViewController.h; sourceTree = "<group>"; };
 		A9A825581B1D990200C34E2F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInViewController.m; path = Views/SignInViewController.m; sourceTree = "<group>"; };
 		A9A825591B1D990200C34E2F /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignInViewController.xib; path = Views/SignInViewController.xib; sourceTree = "<group>"; };
+		A9B7DE361B4CFF3F00FD5027 /* NSArray+Accessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Accessors.h"; sourceTree = "<group>"; };
+		A9B7DE371B4CFF3F00FD5027 /* NSArray+Accessors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Accessors.m"; sourceTree = "<group>"; };
+		A9B7DE381B4CFF3F00FD5027 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
+		A9B7DE391B4CFF3F00FD5027 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
+		A9B7DE3A1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ActiveRecord.h"; sourceTree = "<group>"; };
+		A9B7DE3B1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ActiveRecord.m"; sourceTree = "<group>"; };
 		A9BA2E991B39409400E06803 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Views/NetworkManager/NetworkManager.h; sourceTree = "<group>"; };
 		A9BA2E9A1B39409400E06803 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = Views/NetworkManager/NetworkManager.m; sourceTree = "<group>"; };
 		A9BBA8C61B2A85ED00576149 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = Views/ListViewController/ListViewController.h; sourceTree = "<group>"; };
@@ -386,6 +412,39 @@
 			name = Register;
 			sourceTree = "<group>";
 		};
+		A93C26C11B4BB61F00DC588D /* SAMHUDView */ = {
+			isa = PBXGroup;
+			children = (
+				A93C26C31B4BB64300DC588D /* SAMHUDView */,
+				A93C26C21B4BB63300DC588D /* Resources */,
+			);
+			name = SAMHUDView;
+			sourceTree = "<group>";
+		};
+		A93C26C21B4BB63300DC588D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A93C26C41B4BB65D00DC588D /* SAMHUDView-Check.png */,
+				A93C26C51B4BB65D00DC588D /* SAMHUDView-Check@2x.png */,
+				A93C26C61B4BB65D00DC588D /* SAMHUDView-X.png */,
+				A93C26C71B4BB65D00DC588D /* SAMHUDView-X@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A93C26C31B4BB64300DC588D /* SAMHUDView */ = {
+			isa = PBXGroup;
+			children = (
+				A93C26CC1B4BB66700DC588D /* SAMHUDView.h */,
+				A93C26CD1B4BB66700DC588D /* SAMHUDView.m */,
+				A93C26CE1B4BB66700DC588D /* SAMHUDWindow.h */,
+				A93C26CF1B4BB66700DC588D /* SAMHUDWindow.m */,
+				A93C26D01B4BB66700DC588D /* SAMHUDWindowViewController.h */,
+				A93C26D11B4BB66700DC588D /* SAMHUDWindowViewController.m */,
+			);
+			name = SAMHUDView;
+			sourceTree = "<group>";
+		};
 		A949C1751B1D42F600EDCC95 = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +549,8 @@
 		A949C1B41B1D46F300EDCC95 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				A9B7DE351B4CFF3F00FD5027 /* ObjectiveRecord_Mod */,
+				A93C26C11B4BB61F00DC588D /* SAMHUDView */,
 				A914CCE31B4538260031DAEC /* JSonModel */,
 				A9F643C71B4519D300C975B6 /* MagicalRecord */,
 				A9E5CAE21B268257001421FD /* SKSTableView */,
@@ -612,6 +673,19 @@
 				A9880CA71B21B1160027FEFA /* ListCollectionViewCell.xib */,
 			);
 			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		A9B7DE351B4CFF3F00FD5027 /* ObjectiveRecord_Mod */ = {
+			isa = PBXGroup;
+			children = (
+				A9B7DE361B4CFF3F00FD5027 /* NSArray+Accessors.h */,
+				A9B7DE371B4CFF3F00FD5027 /* NSArray+Accessors.m */,
+				A9B7DE381B4CFF3F00FD5027 /* NSArray+Additions.h */,
+				A9B7DE391B4CFF3F00FD5027 /* NSArray+Additions.m */,
+				A9B7DE3A1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.h */,
+				A9B7DE3B1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.m */,
+			);
+			path = ObjectiveRecord_Mod;
 			sourceTree = "<group>";
 		};
 		A9BBA8C51B2A847400576149 /* ListViewController */ = {
@@ -877,7 +951,10 @@
 			files = (
 				A9F4FB171B32B3B800E96A5B /* CustomTableViewCell.xib in Resources */,
 				A9A8255B1B1D990200C34E2F /* SignInViewController.xib in Resources */,
+				A93C26C91B4BB65D00DC588D /* SAMHUDView-Check@2x.png in Resources */,
+				A93C26CA1B4BB65D00DC588D /* SAMHUDView-X.png in Resources */,
 				A99262A01B1EDFD8003908C6 /* RegisterViewController.xib in Resources */,
+				A93C26C81B4BB65D00DC588D /* SAMHUDView-Check.png in Resources */,
 				A9BBA8CA1B2A85ED00576149 /* ListViewController.xib in Resources */,
 				A949C18F1B1D42F600EDCC95 /* Images.xcassets in Resources */,
 				A9CE03121B4B816A009E504E /* Configurations.plist in Resources */,
@@ -885,6 +962,7 @@
 				A9BBA8D21B2A8C5400576149 /* FirstViewController.xib in Resources */,
 				A949C1C51B1D49A500EDCC95 /* MainViewController.xib in Resources */,
 				A9880CA91B21B1160027FEFA /* ListCollectionViewCell.xib in Resources */,
+				A93C26CB1B4BB65D00DC588D /* SAMHUDView-X@2x.png in Resources */,
 				A9EC9D821B296E950075110E /* MAPopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -960,6 +1038,7 @@
 				A91EEF131B203CDD0067C047 /* CDRTranslucentSideBar.m in Sources */,
 				A99262AC1B1EE5E1003908C6 /* CustomTextField.m in Sources */,
 				A9BA2E9C1B39409400E06803 /* NetworkManager.m in Sources */,
+				A9B7DE3E1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.m in Sources */,
 				A949C1871B1D42F600EDCC95 /* AppDelegate.m in Sources */,
 				A96744951B2539A0006BD1B4 /* PSTGridLayoutItem.m in Sources */,
 				A9BBA8C91B2A85ED00576149 /* ListViewController.m in Sources */,
@@ -973,6 +1052,7 @@
 				A9F644181B451A4700C975B6 /* NSManagedObject+MagicalFinders.m in Sources */,
 				A9F644071B451A3300C975B6 /* NSNumber+MagicalDataImport.m in Sources */,
 				A949C1C81B1D4E2500EDCC95 /* BaseViewController.m in Sources */,
+				A93C26D41B4BB66700DC588D /* SAMHUDWindowViewController.m in Sources */,
 				A949C1841B1D42F600EDCC95 /* main.m in Sources */,
 				A949C1C41B1D49A500EDCC95 /* MainViewController.m in Sources */,
 				A9EC9D8D1B297CB70075110E /* MapViewController.m in Sources */,
@@ -992,17 +1072,21 @@
 				A9A8255A1B1D990200C34E2F /* SignInViewController.m in Sources */,
 				A9F643E31B451A0D00C975B6 /* MagicalRecord+Options.m in Sources */,
 				A96744911B2539A0006BD1B4 /* PSTCollectionViewItemKey.m in Sources */,
+				A93C26D31B4BB66700DC588D /* SAMHUDWindow.m in Sources */,
 				A9E5CAEA1B26827A001421FD /* SKSTableViewCell.m in Sources */,
 				A9880CA81B21B1160027FEFA /* ListCollectionViewCell.m in Sources */,
 				A9F643E41B451A0D00C975B6 /* MagicalRecord+Setup.m in Sources */,
+				A93C26D21B4BB66700DC588D /* SAMHUDView.m in Sources */,
 				A96744901B2539A0006BD1B4 /* PSTCollectionViewFlowLayout.m in Sources */,
 				A967448E1B2539A0006BD1B4 /* PSTCollectionViewController.m in Sources */,
+				A9B7DE3C1B4CFF3F00FD5027 /* NSArray+Accessors.m in Sources */,
 				A9F643F41B451A1B00C975B6 /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				A9F644251B451A5D00C975B6 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				A9BBA8D11B2A8C5400576149 /* FirstViewController.m in Sources */,
 				A9F644261B451A5D00C975B6 /* NSManagedObjectContext+MagicalSaves.m in Sources */,
 				A9F6440A1B451A3300C975B6 /* NSString+MagicalDataImport.m in Sources */,
 				A96744921B2539A0006BD1B4 /* PSTCollectionViewLayout.m in Sources */,
+				A9B7DE3D1B4CFF3F00FD5027 /* NSArray+Additions.m in Sources */,
 				A9F643F21B451A1B00C975B6 /* NSManagedObjectModel+MagicalRecord.m in Sources */,
 				A914CCF91B453A840031DAEC /* JSONValueTransformer.m in Sources */,
 				A9F6441A1B451A4700C975B6 /* NSManagedObject+MagicalRequests.m in Sources */,
