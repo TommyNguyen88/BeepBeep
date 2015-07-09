@@ -41,9 +41,9 @@
 
 static UIImage *_image = nil;
 - (UIView *)expandableView {
-    if (!_image) {
-        _image = [UIImage imageNamed:@"expandableImage.png"];
-    }
+//    if (!_image) {
+//        _image = [UIImage imageNamed:@"expandableImage.png"];
+//    }
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     CGRect frame = CGRectMake(0.0, 0.0, _image.size.width, _image.size.height);

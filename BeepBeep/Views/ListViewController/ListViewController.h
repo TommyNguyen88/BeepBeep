@@ -7,7 +7,6 @@
 //
 
 #import "SuperViewController.h"
-#import <CCBottomRefreshControl/UIScrollView+BottomRefreshControl.h>
 
 @class MainViewController;
 

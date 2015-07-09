@@ -24,9 +24,10 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) IBOutlet UICollectionViewFlowLayout *listViewLayout;
-@property (strong, nonatomic) IBOutlet UIView *viewDateTime;
+
 @property (weak, nonatomic) IBOutlet UILabel *lbDateTime;
 @property (weak, nonatomic) IBOutlet UIDatePicker *pickerDate;
+@property (strong, nonatomic) IBOutlet UIView *viewDateTime;
 
 @end
 
@@ -78,7 +79,8 @@
     }
     
     if (!bottomRefresher) {
-        bottomRefresher = UIRefreshControl.new;
+        bottomRefresher = [UIRefreshControl new];
+        bottomRefresher.triggerVerticalOffset = 100.;
         [bottomRefresher addTarget:self
                             action:@selector(fetchMoreItems)
                   forControlEvents:UIControlEventValueChanged];

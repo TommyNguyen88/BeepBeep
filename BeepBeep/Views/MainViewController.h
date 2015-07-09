@@ -8,16 +8,11 @@
 
 #import "BaseViewController.h"
 #import "SignInViewController.h"
-#import "MapViewController.h"
-#import "FirstViewController.h"
 #import "ListViewController.h"
 
 @interface MainViewController : BaseViewController
 
-
 @property (nonatomic, strong) SignInViewController *signInViewController;
-@property (nonatomic, strong) MapViewController *mapViewController;
 @property (nonatomic, strong) ListViewController *listViewController;
-@property (nonatomic, strong) FirstViewController *firstViewController;
 
 @end

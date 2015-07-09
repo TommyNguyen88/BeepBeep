@@ -10,6 +10,7 @@
                 <outlet property="collectionView" destination="r4i-Ow-CC9" id="Eax-2I-4y6"/>
                 <outlet property="lbDateTime" destination="Oe0-YT-BHb" id="OQL-IZ-zXK"/>
                 <outlet property="listViewLayout" destination="DYV-Qa-ADR" id="oaj-qP-QHG"/>
+                <outlet property="pickerDate" destination="Dck-hS-HPA" id="j9G-KQ-tEd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewDateTime" destination="ZAu-KX-QLt" id="urP-Ah-IvI"/>
             </connections>

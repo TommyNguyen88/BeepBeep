@@ -51,10 +51,9 @@
 		A992629F1B1EDFD8003908C6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A992629D1B1EDFD8003908C6 /* RegisterViewController.m */; };
 		A99262A01B1EDFD8003908C6 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A992629E1B1EDFD8003908C6 /* RegisterViewController.xib */; };
 		A99262AC1B1EE5E1003908C6 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A99262AB1B1EE5E1003908C6 /* CustomTextField.m */; };
+		A99BDCA81B4E61A60087EB6D /* NSArray+Accessors.m in Sources */ = {isa = PBXBuildFile; fileRef = A99BDCA71B4E61A60087EB6D /* NSArray+Accessors.m */; };
 		A9A8255A1B1D990200C34E2F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A825581B1D990200C34E2F /* SignInViewController.m */; };
 		A9A8255B1B1D990200C34E2F /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A825591B1D990200C34E2F /* SignInViewController.xib */; };
-		A9B7DE3C1B4CFF3F00FD5027 /* NSArray+Accessors.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B7DE371B4CFF3F00FD5027 /* NSArray+Accessors.m */; };
-		A9B7DE3D1B4CFF3F00FD5027 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B7DE391B4CFF3F00FD5027 /* NSArray+Additions.m */; };
 		A9B7DE3E1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B7DE3B1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.m */; };
 		A9BA2E9C1B39409400E06803 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BA2E9A1B39409400E06803 /* NetworkManager.m */; };
 		A9BBA8C91B2A85ED00576149 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BBA8C71B2A85ED00576149 /* ListViewController.m */; };
@@ -204,13 +203,11 @@
 		A992629E1B1EDFD8003908C6 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = Views/RegisterViewController.xib; sourceTree = "<group>"; };
 		A99262AA1B1EE5E1003908C6 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTextField.h; path = ThirdParty/CustomTextField.h; sourceTree = "<group>"; };
 		A99262AB1B1EE5E1003908C6 /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTextField.m; path = ThirdParty/CustomTextField.m; sourceTree = "<group>"; };
+		A99BDCA61B4E61A60087EB6D /* NSArray+Accessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Accessors.h"; sourceTree = "<group>"; };
+		A99BDCA71B4E61A60087EB6D /* NSArray+Accessors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Accessors.m"; sourceTree = "<group>"; };
 		A9A825571B1D990200C34E2F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = Views/SignInViewController.h; sourceTree = "<group>"; };
 		A9A825581B1D990200C34E2F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInViewController.m; path = Views/SignInViewController.m; sourceTree = "<group>"; };
 		A9A825591B1D990200C34E2F /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignInViewController.xib; path = Views/SignInViewController.xib; sourceTree = "<group>"; };
-		A9B7DE361B4CFF3F00FD5027 /* NSArray+Accessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Accessors.h"; sourceTree = "<group>"; };
-		A9B7DE371B4CFF3F00FD5027 /* NSArray+Accessors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Accessors.m"; sourceTree = "<group>"; };
-		A9B7DE381B4CFF3F00FD5027 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
-		A9B7DE391B4CFF3F00FD5027 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
 		A9B7DE3A1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ActiveRecord.h"; sourceTree = "<group>"; };
 		A9B7DE3B1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ActiveRecord.m"; sourceTree = "<group>"; };
 		A9BA2E991B39409400E06803 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Views/NetworkManager/NetworkManager.h; sourceTree = "<group>"; };
@@ -681,10 +678,8 @@
 		A9B7DE351B4CFF3F00FD5027 /* ObjectiveRecord_Mod */ = {
 			isa = PBXGroup;
 			children = (
-				A9B7DE361B4CFF3F00FD5027 /* NSArray+Accessors.h */,
-				A9B7DE371B4CFF3F00FD5027 /* NSArray+Accessors.m */,
-				A9B7DE381B4CFF3F00FD5027 /* NSArray+Additions.h */,
-				A9B7DE391B4CFF3F00FD5027 /* NSArray+Additions.m */,
+				A99BDCA61B4E61A60087EB6D /* NSArray+Accessors.h */,
+				A99BDCA71B4E61A60087EB6D /* NSArray+Accessors.m */,
 				A9B7DE3A1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.h */,
 				A9B7DE3B1B4CFF3F00FD5027 /* NSManagedObject+ActiveRecord.m */,
 			);
@@ -1083,14 +1078,13 @@
 				A93C26D21B4BB66700DC588D /* SAMHUDView.m in Sources */,
 				A96744901B2539A0006BD1B4 /* PSTCollectionViewFlowLayout.m in Sources */,
 				A967448E1B2539A0006BD1B4 /* PSTCollectionViewController.m in Sources */,
-				A9B7DE3C1B4CFF3F00FD5027 /* NSArray+Accessors.m in Sources */,
 				A9F643F41B451A1B00C975B6 /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				A9F644251B451A5D00C975B6 /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				A9BBA8D11B2A8C5400576149 /* FirstViewController.m in Sources */,
 				A9F644261B451A5D00C975B6 /* NSManagedObjectContext+MagicalSaves.m in Sources */,
 				A9F6440A1B451A3300C975B6 /* NSString+MagicalDataImport.m in Sources */,
+				A99BDCA81B4E61A60087EB6D /* NSArray+Accessors.m in Sources */,
 				A96744921B2539A0006BD1B4 /* PSTCollectionViewLayout.m in Sources */,
-				A9B7DE3D1B4CFF3F00FD5027 /* NSArray+Additions.m in Sources */,
 				A9F643F21B451A1B00C975B6 /* NSManagedObjectModel+MagicalRecord.m in Sources */,
 				A914CCF91B453A840031DAEC /* JSONValueTransformer.m in Sources */,
 				A9F6441A1B451A4700C975B6 /* NSManagedObject+MagicalRequests.m in Sources */,

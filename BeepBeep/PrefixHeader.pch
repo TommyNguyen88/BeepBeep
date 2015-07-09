@@ -16,7 +16,7 @@
 #import "CoreData+MagicalRecord.h"
 
 #import <AFNetworking/AFNetworking.h>
-#import <MBProgressHUD/MBProgressHUD.h>
+#import <CCBottomRefreshControl/Pods-BeepBeep-CCBottomRefreshControl-umbrella.h>
 
 #import "NSManagedObject+ActiveRecord.h"
 

@@ -61,22 +61,19 @@
         return;
     }
     
-    [[NetworkManager sharedManager] signInWithUsername:email andPassword:pass completion:^(MAResponseObject *responseObject) {
+    [[NetworkManager sharedManager] signInWithUsername:email andPassword:pass completion: ^(MAResponseObject *responseObject) {
         if (!responseObject.error) {
             [[DataManager sharedManager] showLoadingAnimation:NO andDone:YES];
-
-//            BBUser *user = [BBUser createEntity];
-//
-//            NSString *acessToken = responseObject.access_token;
-//            
-//            user.username = email;
-//            user.token = acessToken;
-//            [user save];
+            NSString *acessToken = responseObject.access_token;
+            
+            BBUser *user = [BBUser createEntity];
+            user.username = email;
+            user.token = acessToken;
+            [user save];
             
             if (!_listViewController) {
                 _listViewController = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
             }
-            
             if (!_firstViewController) {
                 _firstViewController = [[FirstViewController alloc] initWithContentViewController:_listViewController];
                 _firstViewController.mainViewController = self.mainViewController;
@@ -86,10 +83,9 @@
         }
         else {
             [[DataManager sharedManager] showLoadingAnimation:NO andDone:NO];
-
+            
             NSString *errDescription = responseObject.error_description;
             NSString *error = responseObject.error;
-            self.txtEmail.text = TEXTNULL;
             self.txtPassword.text = TEXTNULL;
             [self.txtEmail becomeFirstResponder];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:error message:errDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
