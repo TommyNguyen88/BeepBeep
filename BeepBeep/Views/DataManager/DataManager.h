@@ -17,6 +17,6 @@
 + (BOOL)saveAllChanges;
 
 /**-----------------------------------------------------------------**/
-- (void)showLoadingAnimation:(BOOL)on;
+- (void)showLoadingAnimation:(BOOL)on andDone:(BOOL)done;
 
 @end

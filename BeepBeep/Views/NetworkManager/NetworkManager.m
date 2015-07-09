@@ -52,7 +52,7 @@
 #pragma mark - Authentication
 
 - (void)signInWithUsername:(NSString *)username andPassword:(NSString *)password completion:(void (^)(MAResponseObject *))completion {
-    [[DataManager sharedManager] showLoadingAnimation:YES];
+    [[DataManager sharedManager] showLoadingAnimation:YES andDone:NO];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     

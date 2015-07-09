@@ -62,8 +62,9 @@
     }
     
     [[NetworkManager sharedManager] signInWithUsername:email andPassword:pass completion:^(MAResponseObject *responseObject) {
-        [[DataManager sharedManager] showLoadingAnimation:NO];
         if (!responseObject.error) {
+            [[DataManager sharedManager] showLoadingAnimation:NO andDone:YES];
+
 //            BBUser *user = [BBUser createEntity];
 //
 //            NSString *acessToken = responseObject.access_token;
@@ -76,13 +77,21 @@
                 _listViewController = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
             }
             
-            [self.navigationController pushViewController:_listViewController animated:YES];
+            if (!_firstViewController) {
+                _firstViewController = [[FirstViewController alloc] initWithContentViewController:_listViewController];
+                _firstViewController.mainViewController = self.mainViewController;
+            }
+            
+            [self.navigationController pushViewController:_firstViewController animated:YES];
         }
         else {
+            [[DataManager sharedManager] showLoadingAnimation:NO andDone:NO];
+
             NSString *errDescription = responseObject.error_description;
             NSString *error = responseObject.error;
             self.txtEmail.text = TEXTNULL;
             self.txtPassword.text = TEXTNULL;
+            [self.txtEmail becomeFirstResponder];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:error message:errDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
         }

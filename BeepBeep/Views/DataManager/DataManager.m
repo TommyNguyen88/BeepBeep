@@ -36,15 +36,18 @@
     //
 }
 
-- (void)showLoadingAnimation:(BOOL)on {
+- (void)showLoadingAnimation:(BOOL)on andDone:(BOOL)done {
     if (on) {
         // TODO: Check double HUD showing!
         [[DataManager sharedHud] performSelector:@selector(resetTitle:) withObject:@"Loading..."];
         [[DataManager sharedHud] show];
     }
-    else {
+    if (done && !on) {
         [[DataManager sharedHud] completeWithTitle:@"Done"];
         [[DataManager sharedHud] performSelector:@selector(dismiss) withObject:nil afterDelay:0.2];
+    }
+    if (!on && !done) {
+        [[DataManager sharedHud] performSelector:@selector(dismiss) withObject:nil afterDelay:0];
     }
 }
 
