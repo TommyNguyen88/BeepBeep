@@ -15,11 +15,15 @@
 #define Rgb2UIColor(r, g, b)    [UIColor colorWithRed: ((r) / 255.0) green: ((g) / 255.0) blue: ((b) / 255.0) alpha: 1.0]
 #define BBColorToSubRowMenu     Rgb2UIColor(35.0, 40.0, 49.0)
 
+// Google Map API
+#define BBGoogleApiGetDistance                              @"https://maps.googleapis.com/maps/api/directions/json"
+#define BBGoogleServerKey                                   @"AIzaSyDsYTYozs3462lr7YdrjXFdbPj5xZTys3I"
+#define BBGoogleIOSKey                                      @"AIzaSyCqQ4JcgI0EqWcaHuUPOswCNyMe1piX7qg"
+
 //URL which to call API
 #define BBApiSignIn                                         @"/oauth/token"
 #define BBHTTPMethodPOST                                    @"POST"
 #define BBNetWorkTimeOutInterval                            30
-
 
 // KEYS
 #define BBDataHasChanged                                    @"__BBDataHasChanged__"

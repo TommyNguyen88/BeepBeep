@@ -15,6 +15,9 @@
 @interface MapViewController : SuperViewController
 {
     MKPolyline *mKpolyline;
+    GMSMapView *_googleMapView;
+    GMSPlacesClient *_placesClient;
+    GMSPlacePicker *_placePicker;
 }
 
 @property (nonatomic, strong) MainViewController *mainViewController;

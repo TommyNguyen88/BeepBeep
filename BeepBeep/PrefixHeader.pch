@@ -17,6 +17,7 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import <CCBottomRefreshControl/Pods-BeepBeep-CCBottomRefreshControl-umbrella.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 #import "NSManagedObject+ActiveRecord.h"
 

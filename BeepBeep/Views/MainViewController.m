@@ -31,11 +31,17 @@
 
 #pragma Mark - Public method
 - (IBAction)pressButtonSignIn:(id)sender {
-    if (!_signInViewController) {
-        _signInViewController = [[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil];
+//    if (!_signInViewController) {
+//        _signInViewController = [[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil];
+//    }
+//    
+//    [self.navigationController pushViewController:_signInViewController animated:YES];
+    
+    if (!_mapViewController) {
+        _mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
     }
     
-    [self.navigationController pushViewController:_signInViewController animated:YES];
+    [self.navigationController pushViewController:_mapViewController animated:YES];
 }
 
 @end

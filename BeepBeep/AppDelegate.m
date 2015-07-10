@@ -8,19 +8,20 @@
 
 #import "AppDelegate.h"
 #import "DataManager.h"
-
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Setup MagicalRecord
     [MagicalRecord setupAutoMigratingCoreDataStack];
     [DataManager initData];
 
+    //Setup google map
+    [GMSServices provideAPIKey:BBGoogleIOSKey];
+    
     //Setup Window
     CGRect frame = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame:frame];

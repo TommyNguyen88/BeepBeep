@@ -22,15 +22,18 @@ PODS:
     - AFNetworking/NSURLSession
   - CCBottomRefreshControl (0.5):
     - Masonry
+  - GoogleMaps (1.10.1)
   - Masonry (0.6.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
   - CCBottomRefreshControl
+  - GoogleMaps
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   CCBottomRefreshControl: 2cfdbd6f5be5181f5f070637605981d5557e8e32
+  GoogleMaps: ebf08677f181d9c2dcdbd1721d206f02beccc9b1
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
 
 COCOAPODS: 0.37.2

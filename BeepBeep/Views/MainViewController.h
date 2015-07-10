@@ -9,10 +9,12 @@
 #import "BaseViewController.h"
 #import "SignInViewController.h"
 #import "ListViewController.h"
+#import "MapViewController.h"
 
 @interface MainViewController : BaseViewController
 
 @property (nonatomic, strong) SignInViewController *signInViewController;
 @property (nonatomic, strong) ListViewController *listViewController;
+@property (nonatomic, strong) MapViewController *mapViewController;
 
 @end

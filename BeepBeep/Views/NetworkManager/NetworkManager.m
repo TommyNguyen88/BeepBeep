@@ -31,12 +31,9 @@
     self = [super initWithBaseURL:url];
     
     if (self) {
-        self.requestSerializer = [AFHTTPRequestSerializer serializer];
-        
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         
-        self.responseSerializer = [AFJSONResponseSerializer serializer];
         self.securityPolicy.allowInvalidCertificates = YES;
     }
     

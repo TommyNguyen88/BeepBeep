@@ -51,6 +51,16 @@
 		A992629F1B1EDFD8003908C6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A992629D1B1EDFD8003908C6 /* RegisterViewController.m */; };
 		A99262A01B1EDFD8003908C6 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A992629E1B1EDFD8003908C6 /* RegisterViewController.xib */; };
 		A99262AC1B1EE5E1003908C6 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A99262AB1B1EE5E1003908C6 /* CustomTextField.m */; };
+		A999469F1B4F6550005E974C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A999469E1B4F6550005E974C /* AVFoundation.framework */; };
+		A99946A11B4F655C005E974C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99946A01B4F655C005E974C /* GLKit.framework */; };
+		A99946A31B4F656E005E974C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99946A21B4F656E005E974C /* CoreText.framework */; };
+		A99946A51B4F657B005E974C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99946A41B4F657B005E974C /* ImageIO.framework */; };
+		A99946A71B4F6592005E974C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A99946A61B4F6592005E974C /* libc++.dylib */; };
+		A99946A91B4F659E005E974C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A99946A81B4F659E005E974C /* libicucore.dylib */; };
+		A99946AB1B4F65A8005E974C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A99946AA1B4F65A8005E974C /* libz.dylib */; };
+		A99946AD1B4F65B2005E974C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99946AC1B4F65B2005E974C /* OpenGLES.framework */; };
+		A99946AF1B4F65B8005E974C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99946AE1B4F65B8005E974C /* QuartzCore.framework */; };
+		A99946B11B4F65C1005E974C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99946B01B4F65C1005E974C /* SystemConfiguration.framework */; };
 		A99BDCA81B4E61A60087EB6D /* NSArray+Accessors.m in Sources */ = {isa = PBXBuildFile; fileRef = A99BDCA71B4E61A60087EB6D /* NSArray+Accessors.m */; };
 		A9A8255A1B1D990200C34E2F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A825581B1D990200C34E2F /* SignInViewController.m */; };
 		A9A8255B1B1D990200C34E2F /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A825591B1D990200C34E2F /* SignInViewController.xib */; };
@@ -203,6 +213,16 @@
 		A992629E1B1EDFD8003908C6 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = Views/RegisterViewController.xib; sourceTree = "<group>"; };
 		A99262AA1B1EE5E1003908C6 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTextField.h; path = ThirdParty/CustomTextField.h; sourceTree = "<group>"; };
 		A99262AB1B1EE5E1003908C6 /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTextField.m; path = ThirdParty/CustomTextField.m; sourceTree = "<group>"; };
+		A999469E1B4F6550005E974C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A99946A01B4F655C005E974C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		A99946A21B4F656E005E974C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		A99946A41B4F657B005E974C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A99946A61B4F6592005E974C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		A99946A81B4F659E005E974C /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		A99946AA1B4F65A8005E974C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A99946AC1B4F65B2005E974C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A99946AE1B4F65B8005E974C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A99946B01B4F65C1005E974C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A99BDCA61B4E61A60087EB6D /* NSArray+Accessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Accessors.h"; sourceTree = "<group>"; };
 		A99BDCA71B4E61A60087EB6D /* NSArray+Accessors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Accessors.m"; sourceTree = "<group>"; };
 		A9A825571B1D990200C34E2F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = Views/SignInViewController.h; sourceTree = "<group>"; };
@@ -310,6 +330,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99946B11B4F65C1005E974C /* SystemConfiguration.framework in Frameworks */,
+				A99946AF1B4F65B8005E974C /* QuartzCore.framework in Frameworks */,
+				A99946AD1B4F65B2005E974C /* OpenGLES.framework in Frameworks */,
+				A99946AB1B4F65A8005E974C /* libz.dylib in Frameworks */,
+				A99946A91B4F659E005E974C /* libicucore.dylib in Frameworks */,
+				A99946A71B4F6592005E974C /* libc++.dylib in Frameworks */,
+				A99946A51B4F657B005E974C /* ImageIO.framework in Frameworks */,
+				A99946A31B4F656E005E974C /* CoreText.framework in Frameworks */,
+				A99946A11B4F655C005E974C /* GLKit.framework in Frameworks */,
+				A999469F1B4F6550005E974C /* AVFoundation.framework in Frameworks */,
 				A9EC9D931B298ED40075110E /* CoreLocation.framework in Frameworks */,
 				A9EC9D911B298E6F0075110E /* MapKit.framework in Frameworks */,
 				DFCCA84BB8B7257519986F7A /* Pods_BeepBeep.framework in Frameworks */,
@@ -329,6 +359,16 @@
 		4ADE4065CFDA48835A9380E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A99946B01B4F65C1005E974C /* SystemConfiguration.framework */,
+				A99946AE1B4F65B8005E974C /* QuartzCore.framework */,
+				A99946AC1B4F65B2005E974C /* OpenGLES.framework */,
+				A99946AA1B4F65A8005E974C /* libz.dylib */,
+				A99946A81B4F659E005E974C /* libicucore.dylib */,
+				A99946A61B4F6592005E974C /* libc++.dylib */,
+				A99946A41B4F657B005E974C /* ImageIO.framework */,
+				A99946A21B4F656E005E974C /* CoreText.framework */,
+				A99946A01B4F655C005E974C /* GLKit.framework */,
+				A999469E1B4F6550005E974C /* AVFoundation.framework */,
 				A9EC9D921B298ED40075110E /* CoreLocation.framework */,
 				A9EC9D901B298E6F0075110E /* MapKit.framework */,
 				7EFB7B08AB1E2B0F3AFD146C /* Pods_BeepBeep.framework */,
