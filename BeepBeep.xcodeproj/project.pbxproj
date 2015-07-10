@@ -48,8 +48,6 @@
 		A96744971B2539A0006BD1B4 /* PSTGridLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = A967448A1B2539A0006BD1B4 /* PSTGridLayoutSection.m */; };
 		A9880CA81B21B1160027FEFA /* ListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9880CA61B21B1160027FEFA /* ListCollectionViewCell.m */; };
 		A9880CA91B21B1160027FEFA /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9880CA71B21B1160027FEFA /* ListCollectionViewCell.xib */; };
-		A992629F1B1EDFD8003908C6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A992629D1B1EDFD8003908C6 /* RegisterViewController.m */; };
-		A99262A01B1EDFD8003908C6 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A992629E1B1EDFD8003908C6 /* RegisterViewController.xib */; };
 		A99262AC1B1EE5E1003908C6 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A99262AB1B1EE5E1003908C6 /* CustomTextField.m */; };
 		A999469F1B4F6550005E974C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A999469E1B4F6550005E974C /* AVFoundation.framework */; };
 		A99946A11B4F655C005E974C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99946A01B4F655C005E974C /* GLKit.framework */; };
@@ -208,9 +206,6 @@
 		A9880CA51B21B1160027FEFA /* ListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListCollectionViewCell.h; path = Views/CollectionViewCell/ListCollectionViewCell.h; sourceTree = "<group>"; };
 		A9880CA61B21B1160027FEFA /* ListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListCollectionViewCell.m; path = Views/CollectionViewCell/ListCollectionViewCell.m; sourceTree = "<group>"; };
 		A9880CA71B21B1160027FEFA /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListCollectionViewCell.xib; path = Views/CollectionViewCell/ListCollectionViewCell.xib; sourceTree = "<group>"; };
-		A992629C1B1EDFD8003908C6 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = Views/RegisterViewController.h; sourceTree = "<group>"; };
-		A992629D1B1EDFD8003908C6 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = Views/RegisterViewController.m; sourceTree = "<group>"; };
-		A992629E1B1EDFD8003908C6 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisterViewController.xib; path = Views/RegisterViewController.xib; sourceTree = "<group>"; };
 		A99262AA1B1EE5E1003908C6 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTextField.h; path = ThirdParty/CustomTextField.h; sourceTree = "<group>"; };
 		A99262AB1B1EE5E1003908C6 /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTextField.m; path = ThirdParty/CustomTextField.m; sourceTree = "<group>"; };
 		A999469E1B4F6550005E974C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -441,16 +436,6 @@
 			name = SignIn;
 			sourceTree = "<group>";
 		};
-		A924409D1B1D687A0027D349 /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				A992629C1B1EDFD8003908C6 /* RegisterViewController.h */,
-				A992629D1B1EDFD8003908C6 /* RegisterViewController.m */,
-				A992629E1B1EDFD8003908C6 /* RegisterViewController.xib */,
-			);
-			name = Register;
-			sourceTree = "<group>";
-		};
 		A93C26C11B4BB61F00DC588D /* SAMHUDView */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,7 +554,6 @@
 				A91EEF081B2036340067C047 /* FirstViewController */,
 				A91EEEFC1B20328B0067C047 /* SuperViewController */,
 				A949C1AE1B1D461600EDCC95 /* BaseViewController */,
-				A924409D1B1D687A0027D349 /* Register */,
 				A924409C1B1D68720027D349 /* SignIn */,
 				A949C1C01B1D497F00EDCC95 /* MainViewController */,
 			);
@@ -991,7 +975,6 @@
 				A9A8255B1B1D990200C34E2F /* SignInViewController.xib in Resources */,
 				A93C26C91B4BB65D00DC588D /* SAMHUDView-Check@2x.png in Resources */,
 				A93C26CA1B4BB65D00DC588D /* SAMHUDView-X.png in Resources */,
-				A99262A01B1EDFD8003908C6 /* RegisterViewController.xib in Resources */,
 				A93C26C81B4BB65D00DC588D /* SAMHUDView-Check.png in Resources */,
 				A9BBA8CA1B2A85ED00576149 /* ListViewController.xib in Resources */,
 				A949C18F1B1D42F600EDCC95 /* Images.xcassets in Resources */,
@@ -1104,7 +1087,6 @@
 				A9F643E01B451A0D00C975B6 /* MagicalRecord+Actions.m in Sources */,
 				A967448C1B2539A0006BD1B4 /* PSTCollectionView.m in Sources */,
 				A9F643E11B451A0D00C975B6 /* MagicalRecord+ErrorHandling.m in Sources */,
-				A992629F1B1EDFD8003908C6 /* RegisterViewController.m in Sources */,
 				A9F643F31B451A1B00C975B6 /* NSPersistentStore+MagicalRecord.m in Sources */,
 				A9F644161B451A4700C975B6 /* NSManagedObject+MagicalAggregation.m in Sources */,
 				A9F644171B451A4700C975B6 /* NSManagedObject+MagicalDataImport.m in Sources */,
