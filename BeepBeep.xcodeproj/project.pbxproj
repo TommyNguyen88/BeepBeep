@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A907C21F1B3032F4006B0EB1 /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = A907C21E1B3032F4006B0EB1 /* Pin.m */; };
 		A914CCEC1B4538940031DAEC /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCE51B4538940031DAEC /* JSONModel.m */; };
 		A914CCED1B4538940031DAEC /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCE71B4538940031DAEC /* JSONModelArray.m */; };
 		A914CCEE1B4538940031DAEC /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A914CCE91B4538940031DAEC /* JSONModelClassProperty.m */; };
@@ -70,7 +69,6 @@
 		A9BBA8D21B2A8C5400576149 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9BBA8D01B2A8C5400576149 /* FirstViewController.xib */; };
 		A9C9F8F31B45160B001DEC44 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C9F8F21B45160B001DEC44 /* DataManager.m */; };
 		A9CE03121B4B816A009E504E /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9CE03111B4B816A009E504E /* Configurations.plist */; };
-		A9D7812D1B4E1444007BCE76 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9D7812C1B4E1444007BCE76 /* LaunchScreen.xib */; };
 		A9E5CAE91B26827A001421FD /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E5CAE41B26827A001421FD /* SKSTableView.m */; };
 		A9E5CAEA1B26827A001421FD /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E5CAE61B26827A001421FD /* SKSTableViewCell.m */; };
 		A9E5CAEB1B26827A001421FD /* SKSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E5CAE81B26827A001421FD /* SKSTableViewCellIndicator.m */; };
@@ -126,8 +124,6 @@
 /* Begin PBXFileReference section */
 		1E82598EF5433CDDA7BFADEA /* Pods-BeepBeep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeepBeep.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeepBeep/Pods-BeepBeep.debug.xcconfig"; sourceTree = "<group>"; };
 		7EFB7B08AB1E2B0F3AFD146C /* Pods_BeepBeep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeepBeep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A907C21D1B3032F4006B0EB1 /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pin.h; path = Views/MapViewController/Pin.h; sourceTree = "<group>"; };
-		A907C21E1B3032F4006B0EB1 /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pin.m; path = Views/MapViewController/Pin.m; sourceTree = "<group>"; };
 		A914CCE41B4538940031DAEC /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = ThirdParty/JSONModel/JSONModel.h; sourceTree = "<group>"; };
 		A914CCE51B4538940031DAEC /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONModel.m; path = ThirdParty/JSONModel/JSONModel.m; sourceTree = "<group>"; };
 		A914CCE61B4538940031DAEC /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONModelArray.h; path = ThirdParty/JSONModel/JSONModelArray.h; sourceTree = "<group>"; };
@@ -241,7 +237,6 @@
 		A9CE03141B4B8AAD009E504E /* IFColorLogging.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFColorLogging.pch; path = Common/IFColorLogging.pch; sourceTree = "<group>"; };
 		A9CE03151B4B8AAD009E504E /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macro.h; path = Common/Macro.h; sourceTree = "<group>"; };
 		A9CE03161B4B8AB4009E504E /* ModelHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelHeader.h; path = Common/ModelHeader.h; sourceTree = "<group>"; };
-		A9D7812C1B4E1444007BCE76 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		A9E5CAE31B26827A001421FD /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKSTableView.h; path = ThirdParty/SKSTableView/SKSTableView.h; sourceTree = "<group>"; };
 		A9E5CAE41B26827A001421FD /* SKSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKSTableView.m; path = ThirdParty/SKSTableView/SKSTableView.m; sourceTree = "<group>"; };
 		A9E5CAE51B26827A001421FD /* SKSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKSTableViewCell.h; path = ThirdParty/SKSTableView/SKSTableViewCell.h; sourceTree = "<group>"; };
@@ -599,7 +594,6 @@
 				A949C1C11B1D49A500EDCC95 /* MainViewController.h */,
 				A949C1C21B1D49A500EDCC95 /* MainViewController.m */,
 				A949C1C31B1D49A500EDCC95 /* MainViewController.xib */,
-				A9D7812C1B4E1444007BCE76 /* LaunchScreen.xib */,
 			);
 			name = MainViewController;
 			sourceTree = "<group>";
@@ -770,8 +764,6 @@
 				A9EC9D8A1B297CB70075110E /* MapViewController.h */,
 				A9EC9D8B1B297CB70075110E /* MapViewController.m */,
 				A9EC9D8C1B297CB70075110E /* MapViewController.xib */,
-				A907C21D1B3032F4006B0EB1 /* Pin.h */,
-				A907C21E1B3032F4006B0EB1 /* Pin.m */,
 			);
 			name = MapViewController;
 			sourceTree = "<group>";
@@ -982,7 +974,6 @@
 				A9EC9D8E1B297CB70075110E /* MapViewController.xib in Resources */,
 				A9BBA8D21B2A8C5400576149 /* FirstViewController.xib in Resources */,
 				A949C1C51B1D49A500EDCC95 /* MainViewController.xib in Resources */,
-				A9D7812D1B4E1444007BCE76 /* LaunchScreen.xib in Resources */,
 				A9880CA91B21B1160027FEFA /* ListCollectionViewCell.xib in Resources */,
 				A93C26CB1B4BB65D00DC588D /* SAMHUDView-X@2x.png in Resources */,
 				A9EC9D821B296E950075110E /* MAPopUpViewController.xib in Resources */,
@@ -1052,7 +1043,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F4FB161B32B3B800E96A5B /* CustomTableViewCell.m in Sources */,
-				A907C21F1B3032F4006B0EB1 /* Pin.m in Sources */,
 				A96744931B2539A0006BD1B4 /* PSTCollectionViewUpdateItem.m in Sources */,
 				A967448D1B2539A0006BD1B4 /* PSTCollectionViewCell.m in Sources */,
 				A967448B1B2539A0006BD1B4 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
