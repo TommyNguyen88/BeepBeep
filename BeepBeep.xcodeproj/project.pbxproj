@@ -76,7 +76,6 @@
 		A9EC9D821B296E950075110E /* MAPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EC9D801B296E950075110E /* MAPopUpViewController.xib */; };
 		A9EC9D8D1B297CB70075110E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EC9D8B1B297CB70075110E /* MapViewController.m */; };
 		A9EC9D8E1B297CB70075110E /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EC9D8C1B297CB70075110E /* MapViewController.xib */; };
-		A9EC9D911B298E6F0075110E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9EC9D901B298E6F0075110E /* MapKit.framework */; };
 		A9EC9D931B298ED40075110E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9EC9D921B298ED40075110E /* CoreLocation.framework */; };
 		A9F381BE1B3BB294004579FA /* BBDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9F381BC1B3BB294004579FA /* BBDataModel.xcdatamodeld */; };
 		A9F381C71B3BB51E004579FA /* BBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F381C61B3BB51E004579FA /* BBUser.m */; };
@@ -331,7 +330,6 @@
 				A99946A11B4F655C005E974C /* GLKit.framework in Frameworks */,
 				A999469F1B4F6550005E974C /* AVFoundation.framework in Frameworks */,
 				A9EC9D931B298ED40075110E /* CoreLocation.framework in Frameworks */,
-				A9EC9D911B298E6F0075110E /* MapKit.framework in Frameworks */,
 				DFCCA84BB8B7257519986F7A /* Pods_BeepBeep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

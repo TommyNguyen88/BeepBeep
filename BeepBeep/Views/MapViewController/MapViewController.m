@@ -7,16 +7,11 @@
 //
 
 #import "MapViewController.h"
-#import "Pin.h"
 
 #define Location1                   @"-33.044296, 149.678738"
 #define Location2                   @"-33.586029, 150.004505"
 
 @interface MapViewController () <CLLocationManagerDelegate>
-
-@property (nonatomic, strong) NSMutableArray *allPins;
-@property (nonatomic, strong) MKPolylineView *lineView;
-@property (nonatomic, strong) MKPolyline *polyline;
 
 @end
 
@@ -27,9 +22,6 @@ CLPlacemark *thePlacemark;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    //    self.allPins = [NSMutableArray new];
-    //    self.mapView.delegate = self;
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     
@@ -42,11 +34,6 @@ CLPlacemark *thePlacemark;
     }
     
     [self.locationManager startUpdatingLocation];
-    //
-    //    _mapView.showsUserLocation = YES;
-    //    [_mapView setMapType:MKMapTypeStandard];
-    //    [_mapView setZoomEnabled:YES];
-    //    [_mapView setScrollEnabled:YES];
     
     _placesClient = [[GMSPlacesClient alloc] init];
     _googleMapView.settings.myLocationButton = YES;
@@ -61,26 +48,6 @@ CLPlacemark *thePlacemark;
     self.view = _googleMapView;
     
     [self getCurrentPlace];
-    
-    
-    GMSUserAddedPlace *userAddedPlace = [[GMSUserAddedPlace alloc] init];
-    userAddedPlace.name = @"Google Shoes!";
-    userAddedPlace.address = @"48 Pirrama Road, Pyrmont, NSW 2009, Australia";
-    userAddedPlace.coordinate = CLLocationCoordinate2DMake(-33.8669710, 151.1958750);
-    userAddedPlace.phoneNumber = @"(02) 9374 4000";
-    userAddedPlace.website = @"http://www.google.com.au/";
-    userAddedPlace.types = @[@"shoe_store"];
-    
-    [_placesClient addPlace:userAddedPlace callback: ^(GMSPlace *place, NSError *error) {
-        if (error != nil) {
-            NSLog(@"User Added Place error %@", [error localizedDescription]);
-            return;
-        }
-        
-        NSLog(@"Added place with placeID %@", place.placeID);
-        NSLog(@"Added Place name %@", place.name);
-        NSLog(@"Added Place address %@", place.formattedAddress);
-    }];
     
     [self addLocationToMapWithLatitude:-32.33 andLongitude:150.00];
     [self addLocationToMapWithLatitude:-34.33 andLongitude:152.00];
@@ -123,11 +90,11 @@ CLPlacemark *thePlacemark;
     // Creates market in the center of the map
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(latitude, longitude);
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
+    marker.title = @"";
+    marker.snippet = @"";
     marker.appearAnimation = kGMSMarkerAnimationPop;
     marker.map = _googleMapView;
-    //    marker.icon = [UIImage imageNamed:@"LogoBeepBeep"];
+    marker.icon = [UIImage imageNamed:@"LogoLocation"];
 }
 
 - (void)drawLineOnGoogleMap {

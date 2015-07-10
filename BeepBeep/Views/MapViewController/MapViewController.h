@@ -8,13 +8,11 @@
 
 #import "SuperViewController.h"
 #import <CoreLocation/CoreLocation.h>
-#import <MapKit/MapKit.h>
 
 @class MainViewController;
 
 @interface MapViewController : SuperViewController
 {
-    MKPolyline *mKpolyline;
     GMSMapView *_googleMapView;
     GMSPlacesClient *_placesClient;
     GMSPlacePicker *_placePicker;
@@ -22,7 +20,5 @@
 
 @property (nonatomic, strong) MainViewController *mainViewController;
 @property (nonatomic, strong) CLLocationManager *locationManager;
-
-@property (nonatomic, strong) IBOutlet MKMapView *mapView;
 
 @end
