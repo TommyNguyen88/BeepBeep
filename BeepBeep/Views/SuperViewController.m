@@ -181,8 +181,19 @@
     UIFont *boldFont = [UIFont boldSystemFontOfSize:[UIFont systemFontOfSize:25.0].capHeight];
     [cell.textLabel setFont:boldFont];
     
-    UIColor *BGViewCell = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BGTableViewCell"]];
-    [cell setBackgroundColor:BGViewCell];
+    NSLog(@"indexpath -- %ld", (long)indexPath.row);
+    
+    UIColor *BGViewCell1 = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BGTableViewCell"]];
+    UIColor *BGViewCell2 = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LBGTableViewCell"]];
+    
+    int myInt = (int) indexPath.row;
+    if (myInt == 4) {
+        [cell setBackgroundColor:BGViewCell2];
+    }
+    else {
+        [cell setBackgroundColor:BGViewCell1];
+        
+    }
     
     //    if ((indexPath.section == 0 && (indexPath.row == 1 || indexPath.row == 0)) || (indexPath.section == 1 && (indexPath.row == 0 || indexPath.row == 2)))
     //        cell.expandable = YES;
@@ -193,22 +204,10 @@
 }
 
 - (UITableViewCell *)tableView:(SKSTableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *CellIdentifier = @"UITableViewCell";
-//    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    
-//    if (!cell)
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-//    
-//    [cell.textLabel setTextColor:[UIColor whiteColor]];
-//    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.contents[indexPath.section][indexPath.row][indexPath.subRow]];
-//    //    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//    [cell.contentView setBackgroundColor:BBColorToSubRowMenu];
-
     static NSString *CellIdentifier = @"CustomTableViewCell";
     
     CustomTableViewCell *cell = (CustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-      
+    
     if (!cell) {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];

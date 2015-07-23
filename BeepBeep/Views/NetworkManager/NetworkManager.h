@@ -18,5 +18,9 @@
 #pragma mark - Authentication
 
 - (void)signInWithUsername:(NSString *)username andPassword:(NSString *)password completion:(void (^) (MAResponseObject *responseObject))completion;
+- (void)signOutWithUsername:(NSString *)username andPassword:(NSString *)password completion:(void (^) (MAResponseObject *responseObject))completion;
+
+#pragma mark - List Jobs
+- (void)getListJobsWithCompletion:(void (^) (MAResponseObject *responseObject))completion;
 
 @end

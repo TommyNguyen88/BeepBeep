@@ -76,4 +76,15 @@
     return isSaved;
 }
 
+#pragma mark - GET ALL USERS IN LOCAL
+
+- (NSArray *)getAllUsers {
+    NSFetchRequest *fetchRecent = [BBUser requestAll];
+    NSArray *list = [BBUser executeFetchRequest:fetchRecent];
+    if (!list) {
+        list = [NSArray array];
+    }
+    return list;
+}
+
 @end

@@ -22,6 +22,7 @@
 
 //URL which to call API
 #define BBApiSignIn                                         @"/oauth/token"
+#define BBApiGetListJob                                     @"/api/listJobs"
 #define BBHTTPMethodPOST                                    @"POST"
 #define BBNetWorkTimeOutInterval                            30
 

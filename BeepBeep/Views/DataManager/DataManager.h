@@ -18,5 +18,5 @@
 
 /**-----------------------------------------------------------------**/
 - (void)showLoadingAnimation:(BOOL)on andDone:(BOOL)done;
-
+- (NSArray *)getAllUsers;
 @end

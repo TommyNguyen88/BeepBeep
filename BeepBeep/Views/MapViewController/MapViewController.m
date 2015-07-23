@@ -73,6 +73,7 @@ CLPlacemark *thePlacemark;
             return;
         }
         
+        
         if (placeLikelihoodList != nil) {
             for (GMSPlaceLikelihood *likelihood in placeLikelihoodList.likelihoods) {
                 GMSPlace *place = likelihood.place;
@@ -94,7 +95,9 @@ CLPlacemark *thePlacemark;
     marker.snippet = @"";
     marker.appearAnimation = kGMSMarkerAnimationPop;
     marker.map = _googleMapView;
-    marker.icon = [UIImage imageNamed:@"LogoLocation"];
+    //    marker.icon = [UIImage imageNamed:@"LogoLocation"];
+    marker.opacity = 1.0;
+    marker.icon = [GMSMarker markerImageWithColor:[UIColor purpleColor]];
 }
 
 - (void)drawLineOnGoogleMap {
@@ -112,8 +115,8 @@ CLPlacemark *thePlacemark;
     [self getDistanceBetweenLocationCoordinatesFromServerGoogle:Location1 and:Location2];
     
     GMSPolyline *line = [GMSPolyline polylineWithPath:path];
-    line.strokeColor = [UIColor redColor];
-    line.strokeWidth = 5.0f;
+    line.strokeColor = [UIColor blueColor];
+    line.strokeWidth = 2.0f;
     line.map = _googleMapView;
 }
 
@@ -134,17 +137,18 @@ CLPlacemark *thePlacemark;
     
     [manager.requestSerializer setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     
-    NSDictionary *dictParameters = @{ @"origin" : position1,
-                                      @"destination" : position2,
-                                      @"mode" : @"driving",
-                                      @"key": BBGoogleServerKey };
+    NSDictionary *dictParameters = @{ @"origin" :       position1,
+                                      @"destination" :  position2,
+                                      @"mode" :         @"driving",
+                                      @"key":           BBGoogleServerKey };
     
-    [manager GET:BBGoogleApiGetDistance parameters:dictParameters success: ^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:BBGoogleApiGetDistance parameters:dictParameters
+         success: ^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *arr = responseObject[@"routes"][0][@"legs"];
         NSMutableArray *loc = [[NSMutableArray alloc]init];
         
         NSString *dis, *dur;
-        loc = [[arr valueForKey:@"distance"]valueForKey:@"text"];
+        loc = [[arr valueForKey:@"distance"]valueForKey:@"text"]; 
         dis = loc[0];
         
         loc = [[arr valueForKey:@"duration"]valueForKey:@"text"];

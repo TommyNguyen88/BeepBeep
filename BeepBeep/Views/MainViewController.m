@@ -37,11 +37,11 @@
 //    
 //    [self.navigationController pushViewController:_signInViewController animated:YES];
     
-    if (!_mapViewController) {
-        _mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    if (!_listViewController) {
+        _listViewController = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
     }
     
-    [self.navigationController pushViewController:_mapViewController animated:YES];
+    [self.navigationController pushViewController:_listViewController animated:YES];
 }
 
 @end

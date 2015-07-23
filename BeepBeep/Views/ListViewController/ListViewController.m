@@ -24,10 +24,7 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) IBOutlet UICollectionViewFlowLayout *listViewLayout;
-
 @property (weak, nonatomic) IBOutlet UILabel *lbDateTime;
-@property (weak, nonatomic) IBOutlet UIDatePicker *pickerDate;
-@property (strong, nonatomic) IBOutlet UIView *viewDateTime;
 
 @end
 
@@ -42,9 +39,10 @@
     }
     
     currentDate = [NSDate date];
-    
-    _viewDateTime.frame = CGRectMake(0, 2500, DEVICE_WIDTH, _viewDateTime.frame.size.height);
-    [self.view addSubview:_viewDateTime];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE' 'MMMM' 'dd', 'yyyy"];
+    NSString *yourDate = [dateFormatter stringFromDate:currentDate];
+    [self.lbDateTime setText:[NSString stringWithFormat:@"Today, %@", yourDate]];
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -154,58 +152,58 @@
     }
 }
 
-- (void)setupRightNavigationBarItem {
-    self.navigationController.navigationBarHidden = NO;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"BGTextfield"] forBarMetrics:UIBarMetricsDefault];
-    
-    UIButton *btnRight = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btnRight setFrame:CGRectMake(0, 0, 28.0, 20.)];
-    [btnRight setImage:[UIImage imageNamed:@"menuTopLeft"] forState:UIControlStateNormal];
-    [btnRight setImage:[UIImage imageNamed:@"menuTopLeft_active"] forState:UIControlStateHighlighted];
-    [btnRight addTarget:self action:@selector(actionShowPickerDate:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithCustomView:btnRight];
-    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
-                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
-                                       target:nil action:nil];
-    negativeSpacer.width = 0;
-    
-    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:negativeSpacer, rightBarItem, nil]];
-}
+//- (void)setupRightNavigationBarItem {
+//    self.navigationController.navigationBarHidden = NO;
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"BGTextfield"] forBarMetrics:UIBarMetricsDefault];
+//    
+//    UIButton *btnRight = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [btnRight setFrame:CGRectMake(0, 0, 28.0, 20.)];
+//    [btnRight setImage:[UIImage imageNamed:@"menuTopLeft"] forState:UIControlStateNormal];
+//    [btnRight setImage:[UIImage imageNamed:@"menuTopLeft_active"] forState:UIControlStateHighlighted];
+//    [btnRight addTarget:self action:@selector(actionShowPickerDate:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithCustomView:btnRight];
+//    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+//                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+//                                       target:nil action:nil];
+//    negativeSpacer.width = 0;
+//    
+//    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:negativeSpacer, rightBarItem, nil]];
+//}
 
-#pragma Mark - Picker Date Time
-
-- (IBAction)actionShowPickerDate:(id)sender {
-    [self.view endEditing:YES];
-    self.pickerDate.date = [[NSDate date] dateByAddingTimeInterval:1800];
-    
-    [self setOriginYToPickerDate:(self.view.frame.size.height - _viewDateTime.frame.size.height)];
-}
-
-- (IBAction)cancelPickerDate:(id)sender {
-    [self setOriginYToPickerDate:2500];
-}
-
-- (IBAction)donePickerDate:(id)sender {
-    NSDate *chosen = [self.pickerDate date];
-    
-    currentDate = chosen;
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"EEEE' 'MMMM' 'dd', 'yyyy"];
-    NSString *yourDate = [dateFormatter stringFromDate:chosen];
-    
-    [self.lbDateTime setText:yourDate];
-    [self setOriginYToPickerDate:2500];
-}
-
-- (void)setOriginYToPickerDate:(float)originY {
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.5];
-    
-    _viewDateTime.frame = CGRectMake(0, originY, _viewDateTime.frame.size.width, _viewDateTime.frame.size.height);
-    
-    [UIView commitAnimations];
-}
+//#pragma Mark - Picker Date Time
+//
+//- (IBAction)actionShowPickerDate:(id)sender {
+//    [self.view endEditing:YES];
+//    self.pickerDate.date = [[NSDate date] dateByAddingTimeInterval:1800];
+//    
+//    [self setOriginYToPickerDate:(self.view.frame.size.height - _viewDateTime.frame.size.height)];
+//}
+//
+//- (IBAction)cancelPickerDate:(id)sender {
+//    [self setOriginYToPickerDate:2500];
+//}
+//
+//- (IBAction)donePickerDate:(id)sender {
+//    NSDate *chosen = [self.pickerDate date];
+//    
+//    currentDate = chosen;
+//    
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    [dateFormatter setDateFormat:@"EEEE' 'MMMM' 'dd', 'yyyy"];
+//    NSString *yourDate = [dateFormatter stringFromDate:chosen];
+//    
+//    [self.lbDateTime setText:yourDate];
+//    [self setOriginYToPickerDate:2500];
+//}
+//
+//- (void)setOriginYToPickerDate:(float)originY {
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationDuration:0.5];
+//    
+//    _viewDateTime.frame = CGRectMake(0, originY, _viewDateTime.frame.size.width, _viewDateTime.frame.size.height);
+//    
+//    [UIView commitAnimations];
+//}
 
 @end

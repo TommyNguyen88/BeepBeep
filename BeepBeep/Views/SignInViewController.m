@@ -66,10 +66,25 @@
             [[DataManager sharedManager] showLoadingAnimation:NO andDone:YES];
             NSString *acessToken = responseObject.access_token;
             
-            BBUser *user = [BBUser createEntity];
-            user.username = email;
-            user.token = acessToken;
-            [user save];
+            NSArray *allUsers = [[DataManager sharedManager] getAllUsers];
+            
+            BOOL isCreateUser = YES;
+            if (allUsers.count > 0) {
+                for (BBUser *user in allUsers) {
+                    if ([user.username isEqualToString:email]) {
+                        isCreateUser = NO;
+                        user.token = acessToken;
+                        [user save];
+                    }
+                }
+                
+                if (isCreateUser) {
+                    BBUser *user = [BBUser createEntity];
+                    user.username = email;
+                    user.token = acessToken;
+                    [user save];
+                }
+            }
             
             if (!_listViewController) {
                 _listViewController = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
